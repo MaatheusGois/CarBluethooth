@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/ -->
+<html lang="pt-BR" prefix="og: http://ogp.me/ns#" style="height: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!--viewport-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--charset-->
+<!--rss-comments-->
+<link rel="alternate" type="application/rss+xml" href="http://blog.usinainfo.com.br/comments/feed/">
+<!--rss-->
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.usinainfo.com.br/feed/">
+<!--atom-->
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://blog.usinainfo.com.br/feed/atom/">
+<!--pingback-->
+<link rel="pingback" href="http://blog.usinainfo.com.br/xmlrpc.php">
+
+<!--Facebook Open Graph-->
+<title>Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v7.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Carrinho Arduino Controlado através de Bluetooth e Sistema Android! , leia os melhores conteúdos de Arduino no blog da Usinainfo. Encontre tudo sobre eletrônica, automação e arduino.">
+<link rel="canonical" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo">
+<meta property="og:description" content="Carrinho Arduino Controlado através de Bluetooth e Sistema Android! , leia os melhores conteúdos de Arduino no blog da Usinainfo. Encontre tudo sobre eletrônica, automação e arduino.">
+<meta property="og:url" content="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/">
+<meta property="og:site_name" content="Blog da Usinainfo">
+<meta property="article:section" content="Arduino">
+<meta property="article:published_time" content="2016-12-16T12:18:57+00:00">
+<meta property="article:modified_time" content="2017-10-24T10:53:51+00:00">
+<meta property="og:updated_time" content="2017-10-24T10:53:51+00:00">
+<meta property="og:image" content="http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carro-3.jpg">
+<meta property="og:image:width" content="4272">
+<meta property="og:image:height" content="3225">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Carrinho Arduino Controlado através de Bluetooth e Sistema Android! , leia os melhores conteúdos de Arduino no blog da Usinainfo. Encontre tudo sobre eletrônica, automação e arduino.">
+<meta name="twitter:title" content="Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo">
+<meta name="twitter:image" content="http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carro-3.jpg">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Feed para Blog da Usinainfo »" href="http://blog.usinainfo.com.br/feed/">
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog da Usinainfo »" href="http://blog.usinainfo.com.br/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog da Usinainfo » Carrinho Arduino Controlado através de Bluetooth e Sistema Android!" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/feed/">
+<script type="text/javascript" async="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/linkid.js.download"></script><script type="text/javascript" async="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/analytics.js.download"></script><script async="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "UA-3571166-17", {"anonymize_ip":true,"link_attribution":true,"custom_map":{"dimension1":"analyticstracker_cu_tags","dimension2":"analyticstracker_cu_category","dimension3":"analyticstracker_cu_archive","dimension4":"analyticstracker_cu_author","dimension5":"analyticstracker_cu_post_format","dimension6":"analyticstracker_cu_post_type"}});
+  gtag("event","atracker_gtag",{"analyticstracker_cu_tags":"No Tags","non_interaction":true});
+gtag("event","atracker_gtag",{"analyticstracker_cu_category":"Arduino","non_interaction":true});
+gtag("event","atracker_gtag",{"analyticstracker_cu_archive":"2016|12|5|PM","non_interaction":true});
+gtag("event","atracker_gtag",{"analyticstracker_cu_author":"Equipe Usinainfo","non_interaction":true});
+gtag("event","atracker_gtag",{"analyticstracker_cu_post_format":"standard","non_interaction":true});
+gtag("event","atracker_gtag",{"analyticstracker_cu_post_type":"post","non_interaction":true});
+</script>
+
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/blog.usinainfo.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.5"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="cptch_stylesheet-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/front_end_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="cptch_desktop_style-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/desktop_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="double-opt-in-for-download-plugin-styles-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-lightbox-swipebox-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/swipebox.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp_review-style-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/wp-review.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="google-menu-fonts-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="google-widget-fonts-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="style-css" href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/style(1).css" type="text/css" media="all">
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/jquery.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/jquery.scrolldepth.min.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/analyticstracker.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/jquery.swipebox.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activeGalleries":"1","animation":"1","hideCloseButtonOnMobile":"0","removeBarsOnMobile":"0","hideBars":"1","hideBarsDelay":"5000","videoMaxWidth":"1080","useSVG":"1","loopAtEnd":"0","woocommerce_gallery":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/front.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var stepfoxcomplete = {"stepfoxcompleteurl":"http:\/\/blog.usinainfo.com.br\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/sf-autocomplete.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/jquery.flexslider-min.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/exm1-scripts.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/respond.min.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/smoothscroll.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/jquery.validate.min.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/comment_validate.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var exm1_live_video_ajax = {"exm1_live_video_ajaxurl":"http:\/\/blog.usinainfo.com.br\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/ajax-video-widget.js.download"></script>
+<link rel="https://api.w.org/" href="http://blog.usinainfo.com.br/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.usinainfo.com.br/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.usinainfo.com.br/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.9.5">
+<link rel="shortlink" href="http://blog.usinainfo.com.br/?p=1199">
+<link rel="alternate" type="application/json+oembed" href="http://blog.usinainfo.com.br/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.usinainfo.com.br%2Fcarrinho-arduino-controlado-por-bluetooth-e-sistema-android%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://blog.usinainfo.com.br/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.usinainfo.com.br%2Fcarrinho-arduino-controlado-por-bluetooth-e-sistema-android%2F&amp;format=xml">
+
+
+
+<!-- This site is optimized with the Schema plugin v1.6.9.8.1 - https://schema.press -->
+<script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/blog.usinainfo.com.br\/carrinho-arduino-controlado-por-bluetooth-e-sistema-android\/"},"url":"http:\/\/blog.usinainfo.com.br\/carrinho-arduino-controlado-por-bluetooth-e-sistema-android\/","headline":"Carrinho Arduino Controlado através de Bluetooth e Sistema Android!","datePublished":"2016-12-16T12:18:57+00:00","dateModified":"2017-10-24T10:53:51+00:00","publisher":{"@type":"Organization","name":"Usinainfo","logo":{"@type":"ImageObject","url":"http:\/\/blog.usinainfo.com.br\/wp-content\/uploads\/2016\/03\/logo_usina.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"http:\/\/blog.usinainfo.com.br\/wp-content\/uploads\/2016\/12\/carro-3.jpg","width":4272,"height":3225},"articleSection":"Arduino","description":"Quem já montou um Carrinho Arduino \/ Carro Robô com certeza se deparou com diversos problemas e barreiras durante o processo de montagem do seu projeto, chassi com perfurações diferentes, parafusos ou espaçadores insuficientes sempre acaba faltando alguma coisa e você tem que sair correndo comprar ou esperar alguns dias","author":{"@type":"Person","name":"Equipe Usinainfo","url":"http:\/\/blog.usinainfo.com.br\/author\/anapaula\/","image":{"@type":"ImageObject","url":"http:\/\/1.gravatar.com\/avatar\/112b5a6a7222d0aa1b1ec50ba29cbc99?s=96&d=mm&r=g","height":96,"width":96}},"commentCount":"5","comment":[{"@type":"Comment","dateCreated":"2017-10-31 19:42:33","description":"Boa tarde! A utilização vai depender do driver que está utilizando, Shield ou módulo, vale lembrar que se está utilizando um módulo com alimentação externa precisa lembrar de estabelecer um negativo comum entre os elementos do seu projeto. Caso optou por não incluir algum tipo de alimentação externa vale lembrar que existe a possibilidade de não estar havendo corrente suficiente para alimentar seu equipamento Arduino e os Motores.\nAtt Equipe UsinaInfo","author":{"@type":"Person","name":"Equipe Usinainfo","url":""}},{"@type":"Comment","dateCreated":"2017-10-31 14:11:26","description":"Como ficaria a ligação usando um driver l293d? Montei um carrinho usando esse tutorial mas não estou conseguindo fazer funcionar.","author":{"@type":"Person","name":"Claudio avila","url":""}},{"@type":"Comment","dateCreated":"2017-10-31 13:24:44","description":"Boa tarde!\nSim, a implementação de mais um Drive igual ao utilizado para o controle dos motores é fundamental caso opte por este modelo. Caso esteja pensando em utilizar os mesmos comandos para as rodas de frene e de trás, indico inclusive a utilização de um outro Drive com maior capacidade de corrente e que consiga controlar neste caso, dois motores por canal. Lembramos que qualquer mudança deve ser pensada levando em consideração a corrente e a tensão dos equipamentos utilizados, podendo ser necessários incluir mais pilhas \/ baterias ou até mesmo algum outro componente ao projeto. Att Equipe UsinaInfo","author":{"@type":"Person","name":"Equipe Usinainfo","url":""}},{"@type":"Comment","dateCreated":"2017-10-25 23:00:44","description":"Olá usinainfo! Agradeço e parabenizo o projeto!! Preciso de ajuda com um carrinho 4WD, se eu utilizar o mesmo componente e colocar mais um driver duplo pont H para as outras duas rodas, funcionaria ? Estou procurando fazer com componentes mais simples.","author":{"@type":"Person","name":",","url":""}},{"@type":"Comment","dateCreated":"2017-03-04 02:30:09","description":"I've read some excellent stuff here. Definitely price bookmarking for revisiting. I surprise how much effort you place to create this type of great informative site. ","author":{"@type":"Person","name":"Smithd213","url":""}},{"@type":"Comment","dateCreated":"2017-03-04 02:28:24","description":"Very nice post. I certainly appreciate this website.","author":{"@type":"Person","name":"Johne71","url":""}}]}</script>
+
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://blog.usinainfo.com.br/wp-content/plugins/wp-review/assets/css/wp-review-ie7.css">
+<![endif]-->
+
+
+<style type="text/css">
+.fullwidth-image:before{ box-shadow: inset 0 -327px 200px -200px #eeeeee;}
+.top-menu{background-color:#ffffff;}
+.top-menu-posts li .category-icon a{color:#a3a3a3;}
+.top-menu-posts .featured-posts-title a{color:#101010;}
+body, .small-title, .widget-title, .tv-featured-title{font-family:Montserrat;}
+.popular-part:before{background:#101010;box-shadow: 0 -999px 0 999px #101010;}
+.popular-slider-container .slides:before{background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,#101010 64%,#101010 100%);}
+.popular-part a, .popular-part .widget-title{color:#FFFFFF;}
+.read-more a{color:#e5192c;}
+.blog-post-content, .img-featured-text, .about-text, .exm1-blog-posts-subtitle, .flex-active-slide .slide-excerpt, .jumping-posts-excerpt, .combination-title-subtitle, .tv-widget-content, #post-content, #post-page-subtitle, .newsroll-posts-title a{font-family:Open Sans;}
+#footer{background:#101010; }
+#footer a, .copyright-text{color:#FFFFFF;}
+#footer a:hover{color:#e5192c;}
+.footer-wrap{border-color:#232323;}
+#main-nav ul li a, #mob-menu{font-family: Montserrat;}
+#wrapper, .footer-wrap{max-width:1290px;}
+#navigation .content-social, .top-menu, .big-logo, #navigation #searchform input, .sub-menu-wrapper, .ticker-box, #navigation{border-color:#eaeaea;}
+#site-logo, .about-logo, #mob-menu{background:#e5192c;}
+#navigation, .ticker-box, .page-numbers.current, .about-social{background:#ffffff;}
+.menu-item .menu-link, #ticker a, .page-numbers.current, #navigation .submit-button, #navigation .content-social li a, .about-social a, .ticker-heading{color:#101010;}
+.subsignmeni:after{border-top: 8px solid #101010;}
+#main .widget-title, #main .widget-title a{color:#e5192c;}
+#main-nav ul li:hover > .menu-link, #ticker a:hover, #navigation .content-social li a:hover, .about-social a:hover, .sub-menu-wrapper .small-category li:hover > .small-text a{color:#e5192c;}
+.subsignmeni:hover:after{border-top: 8px solid #e5192c;}
+#main-nav ul li > .menu-link{font-weight:800;}
+.menu-link {font-size:15px;}
+.featured-category, .trending-title, .trending-posts, .page-numbers, input#wp-submit{background: #e5192c;}
+.newsroll-title, .exm1-blog-posts-thumb, .post-page-gallery-thumbnails .flex-active-slide:after, .flex-active .wide-slider-thumb:after{border-color:#e5192c;}
+.blog-post-author a, .exm1-blog-posts-author a, #recentcomments li, .widget_categories select, .widget_archive select, .sticky a{color:#e5192c;}
+
+#searchform .submit-button{background:#e5192c url(http://blog.usinainfo.com.br/wp-content/themes/examiner/images/search-icon-black.png) no-repeat center;}
+#navigation #searchform input{background-image:url(http://blog.usinainfo.com.br/wp-content/themes/examiner/images/search-icon-black.png);}
+#navigation #mob-menu #searchform input{background-image:url(http://blog.usinainfo.com.br/wp-content/themes/examiner/images/search-icon.png);}
+.mob-menu-button{background: url(http://blog.usinainfo.com.br/wp-content/themes/examiner/images/menu_icon.png) no-repeat 50% 50%; } 
+
+ul.tabs li.active{background:#ffffff;}
+ul.tabs li.active, ul.tabs li {border-color:#ffffff;}
+.tabs li.active h4 a{color:#101010;}
+
+.img-featured-review-score, .blog-post-categories, .jumping-posts li:hover .jumping-posts-text, .woocommerce input#searchsubmit, .super-slider-category, .floating-share-icons li, .pagination.pagination-load-more a{background:#e5192c;}
+.sub-meni .menu-links.inside-menu li{background: #ffffff;}
+.sub-meni .menu-links.inside-menu li a{color: #101010;}
+.sub-menu{border-color:#e5192c;}
+
+#post-content{font-size:16px;line-height:25.6px;}
+::selection{background:#e5192c;}
+::-moz-selection{background:#e5192c;}
+.load-circle{border-bottom:5px solid #e5192c;border-right:5px solid #e5192c;box-shadow: 0 0 35px #e5192c;}
+#wp-calendar #today{background:#e5192c !important;text-shadow:none;}
+.total-score, .score-width, li:hover .play-icon{background: #e5192c;}
+.jumping-posts li:hover .jumping-posts-text:before{border-bottom: 14px solid #e5192c;}
+.single-post #post-content.first-letter > p:first-of-type:first-letter{font-size:67px; color:#e5192c;float: left;line-height: 60px;margin-right: 15px;font-weight:800;}
+#post-page-title h1{text-transform:uppercase;}
+blockquote, q.left, q{border-left: 2px solid #e5192c;color:#e5192c;}
+.img-featured-review-score:before{border-top: 9px solid #e5192c;}
+.sub-meni .menu-links.inside-menu li:hover{background:#ffffff;}
+#main-nav .sub-meni .menu-links.inside-menu li:hover > .menu-link{color:#e5192c;}
+.ticker-arrows{background:#ffffff;box-shadow:-21px 0 30px #ffffff;}
+.widget-title {font-style: normal;font-weight:700;}
+
+.huge .img-featured-posts-image:after, .super-image:after, .super-slider li .super-slider-post:after, .super-slider li .super-slider-post:after, .img-featured-posts-image:before, .small-image:before, .wide-slider .slides li:after{ background: linear-gradient(to bottom, #2a7ab7, #dd4b4b);opacity:0.2;}
+
+
+.post-author a, .post-author a:visited, .good-title, .bad-title, #post-content a, .trending-posts-category a, .category-tv-icon a, .ticker-sign, .category-icon a, .jumping-posts-category a, a:hover, .category-icon a:hover, .trending-posts-category a:hover, .featured-posts-title a:hover, #post-content a:hover, .blog-post-title h2 a:hover, .bypostauthor a:hover, .post-author a:hover, .most-commented-cateogory a, .most-commented-count a {color:#e5192c;}
+
+
+.content q.right{border-left:0;border-right: 2px solid #e5192c;color:#e5192c;}
+
+
+
+.widget.buddypress div.item-options a, .widget_display_stats dd{color:#e5192c;}
+#buddypress div.item-list-tabs ul li a span, #buddypress div.item-list-tabs ul li.current a span, #buddypress div.item-list-tabs ul li.selected a span, .widget.buddypress #bp-login-widget-form #bp-login-widget-submit, span.bp-login-widget-register-link a, button#user-submit, .bbp-login-form .bbp-login-links a, tt button.button.submit.user-submit, input#bbp_search_submit {background:#e5192c;}
+
+.image_fx1:hover:after{background: #e5192c;}
+
+.cart-top{background:url(http://blog.usinainfo.com.br/wp-content/themes/examiner/images/shopping-cart-icon-black.png) no-repeat 36px 0;}
+@media screen and (max-width: 600px) {#main-nav ul li {background:#ffffff;}}
+
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt, .woocommerce .widget_layered_nav_filters ul li a, .woocommerce-page .widget_layered_nav_filters ul li a, .woocommerce .widget_layered_nav ul li.chosen a, .woocommerce-page .widget_layered_nav ul li.chosen a, .woocommerce span.onsale, .woocommerce-page span.onsale, .woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before, .woocommerce .woocommerce-info:before, .woocommerce-page .woocommerce-info:before, .woocommerce table.cart a.remove:hover, .woocommerce #content table.cart a.remove:hover, .woocommerce-page table.cart a.remove:hover, .woocommerce-page #content table.cart a.remove:hover, .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce .widget_price_filter .ui-slider .ui-slider-range, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-range, .woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li{background:#e5192c;}
+
+.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price, .woocommerce div.product span.price, .woocommerce div.product p.price, .woocommerce #content div.product span.price, .woocommerce #content div.product p.price, .woocommerce-page div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page #content div.product p.price, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce #content input.button.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce #content input.button:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page #content input.button:hover, .woocommerce-page #main a.button:hover, .woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li, .woocommerce div.product .woocommerce-tabs ul.tabs .active a:hover, span.posted_in a, span.tagged_as a, .woocommerce h1.page-title, .woocommerce .jumping-posts .star-rating, .woocommerce-page .jumping-posts .star-rating, .amount, #header .cart-contents:hover, #header .cart-contents{color:#e5192c;}
+
+.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message, .woocommerce .woocommerce-info, .woocommerce-page .woocommerce-info{border-top:3px solid #e5192c; }
+
+.product_meta, .woocommerce div.product div.summary, .woocommerce #content div.product div.summary, .woocommerce-page div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce #reviews #comments ol.commentlist li .comment-text p, .woocommerce-page #reviews #comments ol.commentlist li .comment-text p, .woocommerce #review_form #respond p, .woocommerce-page #review_form #respond p, .woocommerce div.product .woocommerce-tabs .panel, .woocommerce #content div.product .woocommerce-tabs .panel, .woocommerce-page div.product .woocommerce-tabs .panel, .woocommerce-page #content div.product .woocommerce-tabs .panel, .woocommerce #reviews h3, .woocommerce-page #reviews h3{font-size:16px;line-height:25.6px;}
+
+</style><script type="text/javascript">
+			var slide_picker = 'slide';
+			var widget_fx = 'widgetfx-1';
+			var image_effect = 'image_fx3';
+	</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #eeeeee; }
+</style>
+<link rel="amphtml" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="http://blog.usinainfo.com.br/wp-content/uploads/2016/04/favicon-65x65.png" sizes="32x32">
+<link rel="icon" href="http://blog.usinainfo.com.br/wp-content/uploads/2016/04/favicon.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://blog.usinainfo.com.br/wp-content/uploads/2016/04/favicon-186x186.png">
+<meta name="msapplication-TileImage" content="http://blog.usinainfo.com.br/wp-content/uploads/2016/04/favicon.png">
+</head>
+
+<body class="post-template-default single single-post postid-1199 single-format-standard custom-background">
+<header id="header">
+		<div id="nav-wrapper">
+		<div id="navigation" class="show-menu  fixed-menu">
+			<div id="site-logo">
+				<div class="big-logo">
+					<a href="http://blog.usinainfo.com.br/">
+					<img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/logo-blog.fw_.png" height="140" width="308" alt="Blog da Usinainfo">
+					</a>
+				</div>
+				<!--big-logo-->
+			</div>
+			<!--site-logo-->
+						<div class="top-menu">
+				<div class="top-menu-posts">
+	<ul>
+			<li class="widgetfx-1">				
+			<div class="featured-posts-image">
+								<a href="http://blog.usinainfo.com.br/utilizando-o-raspberry-pi-3-e-sensor-pir-no-acionamento-de-lampadas/" title="Utilizando o Raspberry pi 3 e sensor PIR no acionamento de lâmpadas">
+				<div class="image_fx3"><img width="83" height="83" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_1412-3-83x83.jpg" class="attachment-small-thumb size-small-thumb wp-post-image" alt="" srcset="http://blog.usinainfo.com.br/wp-content/uploads/2018/05/IMG_1412-3-83x83.jpg 83w, http://blog.usinainfo.com.br/wp-content/uploads/2018/05/IMG_1412-3-150x150.jpg 150w, http://blog.usinainfo.com.br/wp-content/uploads/2018/05/IMG_1412-3-65x65.jpg 65w, http://blog.usinainfo.com.br/wp-content/uploads/2018/05/IMG_1412-3-111x111.jpg 111w" sizes="(max-width: 83px) 100vw, 83px"></div>				</a>
+							</div>
+			<!---featured-posts-image-->
+			<div class="featured-posts-text">
+				<span class="category-icon">
+				<a href="http://blog.usinainfo.com.br/categoria/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>				</span>
+				<div class="featured-posts-title">
+					<a href="http://blog.usinainfo.com.br/utilizando-o-raspberry-pi-3-e-sensor-pir-no-acionamento-de-lampadas/" title="Utilizando o Raspberry pi 3 e sensor PIR no acionamento de lâmpadas">
+					Utilizando o Raspberry pi 3 e sensor PIR no acionamento…					</a>
+				</div>
+				<!--featured-posts-title-->	
+			</div>
+			<!--featured-posts-text-->
+		</li>
+				<li class="widgetfx-1">				
+			<div class="featured-posts-image">
+								<a href="http://blog.usinainfo.com.br/arduino-day-recife-um-evento-arduino-day-com-parceira-da-usinainfo/" title="Arduino Day Recife – Um evento Arduino Day com parceira da Usinainfo!">
+				<div class="image_fx3"><img width="83" height="83" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_2853-83x83.jpg" class="attachment-small-thumb size-small-thumb wp-post-image" alt="" srcset="http://blog.usinainfo.com.br/wp-content/uploads/2018/04/IMG_2853-83x83.jpg 83w, http://blog.usinainfo.com.br/wp-content/uploads/2018/04/IMG_2853-150x150.jpg 150w, http://blog.usinainfo.com.br/wp-content/uploads/2018/04/IMG_2853-65x65.jpg 65w, http://blog.usinainfo.com.br/wp-content/uploads/2018/04/IMG_2853-111x111.jpg 111w" sizes="(max-width: 83px) 100vw, 83px"></div>				</a>
+							</div>
+			<!---featured-posts-image-->
+			<div class="featured-posts-text">
+				<span class="category-icon">
+				<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>				</span>
+				<div class="featured-posts-title">
+					<a href="http://blog.usinainfo.com.br/arduino-day-recife-um-evento-arduino-day-com-parceira-da-usinainfo/" title="Arduino Day Recife – Um evento Arduino Day com parceira da Usinainfo!">
+					Arduino Day Recife – Um evento Arduino Day com parceira…					</a>
+				</div>
+				<!--featured-posts-title-->	
+			</div>
+			<!--featured-posts-text-->
+		</li>
+				<li class="widgetfx-1">				
+			<div class="featured-posts-image">
+								<a href="http://blog.usinainfo.com.br/sensor-de-fluxo-de-agua-com-raspberry-pi/" title="Sensor de Fluxo de Água – Como Programar com Raspberry PI 3">
+				<div class="image_fx3"><img width="83" height="83" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_1188-edit-83x83.jpg" class="attachment-small-thumb size-small-thumb wp-post-image" alt="" srcset="http://blog.usinainfo.com.br/wp-content/uploads/2018/04/IMG_1188-edit-83x83.jpg 83w, http://blog.usinainfo.com.br/wp-content/uploads/2018/04/IMG_1188-edit-150x150.jpg 150w, http://blog.usinainfo.com.br/wp-content/uploads/2018/04/IMG_1188-edit-65x65.jpg 65w, http://blog.usinainfo.com.br/wp-content/uploads/2018/04/IMG_1188-edit-111x111.jpg 111w" sizes="(max-width: 83px) 100vw, 83px"></div>				</a>
+							</div>
+			<!---featured-posts-image-->
+			<div class="featured-posts-text">
+				<span class="category-icon">
+				<a href="http://blog.usinainfo.com.br/categoria/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>				</span>
+				<div class="featured-posts-title">
+					<a href="http://blog.usinainfo.com.br/sensor-de-fluxo-de-agua-com-raspberry-pi/" title="Sensor de Fluxo de Água – Como Programar com Raspberry PI 3">
+					Sensor de Fluxo de Água – Como Programar com Raspberry…					</a>
+				</div>
+				<!--featured-posts-title-->	
+			</div>
+			<!--featured-posts-text-->
+		</li>
+			</ul>
+</div>
+<!-- top-menu-events -->
+ 				<div class="search-box">
+					<form method="get" id="searchform" action="http://blog.usinainfo.com.br//">
+	<input type="text" name="s" id="s" value="" autocomplete="off">
+	<button type="submit" class="submit-button">
+	</button>
+	<ul class="featured-thumbnails"></ul>
+</form>				</div>
+				<!--search-box-->
+			</div>
+			<!-- top-menu -->
+						<nav id="main-nav">
+				<div id="mob-menu">
+					<div class="mob-menu-button">
+					</div>
+					<!-- mob-menu-button -->
+					<a href="http://blog.usinainfo.com.br/">
+						<img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/logo-blog.fw_.png" height="140" width="308" alt="Blog da Usinainfo">
+					</a>
+					<div class="search-box">
+						<form method="get" id="searchform" action="http://blog.usinainfo.com.br//">
+	<input type="text" name="s" id="s" value="" autocomplete="off">
+	<button type="submit" class="submit-button">
+	</button>
+	<ul class="featured-thumbnails"></ul>
+</form>					</div>
+					<!--search-box-->
+
+				</div>
+				<!--mob-menu-->
+				<div class="menu-blog-container"><ul id="menu-blog" class="menu"><li id="menu-item-exm1410" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://blog.usinainfo.com.br/categoria/ferramentas/" title="Ferramentas" class="menu-link">Ferramentas</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/como-crimpar-cabo-de-rede-kit-crimpagem-para-cabos-de-rede-rj45/" title="Como Crimpar Cabo de Rede – Kit Crimpagem para Cabos…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/3-298x186.jpg" alt="Como Crimpar Cabo de Rede – Kit Crimpagem para Cabos…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/como-crimpar-cabo-de-rede-kit-crimpagem-para-cabos-de-rede-rj45/">Como Crimpar Cabo de Rede – Kit Crimpagem para Cabos…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/gaveteiro-organizador-para-bancada/" title="Gaveteiro Organizador para Bancadas de Trabalho – Um modo Organizado…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/111-298x186.jpg" alt="Gaveteiro Organizador para Bancadas de Trabalho – Um modo Organizado…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/gaveteiro-organizador-para-bancada/">Gaveteiro Organizador para Bancadas de Trabalho – Um modo Organizado…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/grampo-plastico-multiuso-e-sua-aplicacao-na-manutencao-de-smartphones/" title="Grampo Plástico Multiuso e sua Aplicação na Manutenção de Smartphones"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_8073-298x186.jpg" alt="Grampo Plástico Multiuso e sua Aplicação na Manutenção de Smartphones"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/grampo-plastico-multiuso-e-sua-aplicacao-na-manutencao-de-smartphones/">Grampo Plástico Multiuso e sua Aplicação na Manutenção de Smartphones</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/qual-microscopio-digital-usb-escolher-vantagens-e-desvantagens/" title="Qual Microscópio Digital USB Escolher? Vantagens e Desvantagens!"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/foto1-298x186.jpg" alt="Qual Microscópio Digital USB Escolher? Vantagens e Desvantagens!"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/qual-microscopio-digital-usb-escolher-vantagens-e-desvantagens/">Qual Microscópio Digital USB Escolher? Vantagens e Desvantagens!</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/qual-melhor-lupa-de-bancada-para-aumentar-o-seu-profissionalismo/" title="Qual a Melhor Lupa de Bancada para “Aumentar” o seu…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_7375-298x186.jpg" alt="Qual a Melhor Lupa de Bancada para “Aumentar” o seu…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/qual-melhor-lupa-de-bancada-para-aumentar-o-seu-profissionalismo/">Qual a Melhor Lupa de Bancada para “Aumentar” o seu…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/kit-eletronica-e-kit-solda-para-iniciantes-soldar-ja-se-tornou-fundamental/" title="Kit Eletrônica e Kit Solda para Iniciantes! Soldar já se…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_7473-298x186.jpg" alt="Kit Eletrônica e Kit Solda para Iniciantes! Soldar já se…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/kit-eletronica-e-kit-solda-para-iniciantes-soldar-ja-se-tornou-fundamental/">Kit Eletrônica e Kit Solda para Iniciantes! Soldar já se…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm177" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children"><a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino" class="menu-link">Arduino</a><div class="sub-menu-wrapper"><div class="sub-menu five-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/arduino-day-recife-um-evento-arduino-day-com-parceira-da-usinainfo/" title="Arduino Day Recife – Um evento Arduino Day com parceira…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_2853-298x186.jpg" alt="Arduino Day Recife – Um evento Arduino Day com parceira…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/arduino-day-recife-um-evento-arduino-day-com-parceira-da-usinainfo/">Arduino Day Recife – Um evento Arduino Day com parceira…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/arduino-standalone-com-protoboard-um-projeto-diy-para-quem-deseja-construir-o-seu-proprio-arduino/" title="Arduino Standalone com Protoboard Um Projeto DIY para Quem Deseja…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/stan-298x186.jpg" alt="Arduino Standalone com Protoboard Um Projeto DIY para Quem Deseja…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/arduino-standalone-com-protoboard-um-projeto-diy-para-quem-deseja-construir-o-seu-proprio-arduino/">Arduino Standalone com Protoboard Um Projeto DIY para Quem Deseja…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/comunicacao-sem-fio-arduino-transferindo-dados-com-transmissor-receptor-rf-433mhz/" title="Comunicação sem Fio Arduino – Transferindo dados com Transmissor +…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/9561-298x186.jpg" alt="Comunicação sem Fio Arduino – Transferindo dados com Transmissor +…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/comunicacao-sem-fio-arduino-transferindo-dados-com-transmissor-receptor-rf-433mhz/">Comunicação sem Fio Arduino – Transferindo dados com Transmissor +…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/como-programar-arduino-gravando-codigos-em-diferentes-modelos-arduino/" title="Como Programar Arduino – Gravando Códigos em Diferentes Modelos Arduino!"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/arduinos2-298x186.jpg" alt="Como Programar Arduino – Gravando Códigos em Diferentes Modelos Arduino!"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/como-programar-arduino-gravando-codigos-em-diferentes-modelos-arduino/">Como Programar Arduino – Gravando Códigos em Diferentes Modelos Arduino!</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/como-programar-arduino-uma-introducao-ao-software-arduino/" title="Como Programar Arduino – Uma introdução ao Software Arduino!"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/verificar-298x186.png" alt="Como Programar Arduino – Uma introdução ao Software Arduino!"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/como-programar-arduino-uma-introducao-ao-software-arduino/">Como Programar Arduino – Uma introdução ao Software Arduino!</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div>
+<ul class="menu-links inside-menu">
+	<li id="menu-item-exm1888" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://blog.usinainfo.com.br/categoria/curso-arduino/" title="Curso Arduino" class="menu-link">Curso Arduino</a><div class="sub-menu five-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/aprendendo-arduino-aula-5/" title="Aprendendo Arduino – Aula 5"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/2-2-298x186.jpg" alt="Aprendendo Arduino – Aula 5"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/aprendendo-arduino-aula-5/">Aprendendo Arduino – Aula 5</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/aprendendo-arduino-aula-4/" title="Aprendendo Arduino – Aula 4"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/2-2-298x186.jpg" alt="Aprendendo Arduino – Aula 4"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/aprendendo-arduino-aula-4/">Aprendendo Arduino – Aula 4</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/aprendendo-arduino-aula-3/" title="Aprendendo Arduino – Aula 3"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/2-2-298x186.jpg" alt="Aprendendo Arduino – Aula 3"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/aprendendo-arduino-aula-3/">Aprendendo Arduino – Aula 3</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/aprendendo-arduino-curso-aula-2/" title="Aprendendo Arduino – Aula 2"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/2-2-298x186.jpg" alt="Aprendendo Arduino – Aula 2"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/aprendendo-arduino-curso-aula-2/">Aprendendo Arduino – Aula 2</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/aprendendo-arduino-aula-1/" title="Aprendendo Arduino – Aula 1"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/2-2-298x186.jpg" alt="Aprendendo Arduino – Aula 1"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/aprendendo-arduino-aula-1/">Aprendendo Arduino – Aula 1</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></li>
+</ul>
+</div><span class="subsignmeni"></span></li>
+<li id="menu-item-exm1900" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://blog.usinainfo.com.br/categoria/raspberry-pi/" title="Raspberry Pi" class="menu-link">Raspberry Pi</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/utilizando-o-raspberry-pi-3-e-sensor-pir-no-acionamento-de-lampadas/" title="Utilizando o Raspberry pi 3 e sensor PIR no acionamento…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_1412-3-298x186.jpg" alt="Utilizando o Raspberry pi 3 e sensor PIR no acionamento…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/utilizando-o-raspberry-pi-3-e-sensor-pir-no-acionamento-de-lampadas/">Utilizando o Raspberry pi 3 e sensor PIR no acionamento…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/sensor-de-fluxo-de-agua-com-raspberry-pi/" title="Sensor de Fluxo de Água – Como Programar com Raspberry…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_1188-edit-298x186.jpg" alt="Sensor de Fluxo de Água – Como Programar com Raspberry…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/sensor-de-fluxo-de-agua-com-raspberry-pi/">Sensor de Fluxo de Água – Como Programar com Raspberry…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/utilizando-o-raspberry-pi-3-no-acionamento-de-lampadaspronto-post-de-automacao-residencial/" title="Utilizando o Raspberry pi 3 no acionamento de lâmpadas"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/Rasp-rele-ok-298x186.jpg" alt="Utilizando o Raspberry pi 3 no acionamento de lâmpadas"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/utilizando-o-raspberry-pi-3-no-acionamento-de-lampadaspronto-post-de-automacao-residencial/">Utilizando o Raspberry pi 3 no acionamento de lâmpadas</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/arduino-ou-raspberry-pi-qual-utilizar-pronto/" title="Raspberry Pi vs Arduino – Qual utilizar?"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_5828-2-298x186.jpg" alt="Raspberry Pi vs Arduino – Qual utilizar?"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/arduino-ou-raspberry-pi-qual-utilizar-pronto/">Raspberry Pi vs Arduino – Qual utilizar?</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/os-primeiros-passos-com-raspberry-pi-3-controlando-gpio-por-sysfs/" title="Os primeiros passos com Raspberry Pi 3: Controlando a GPIO…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_7369-298x186.jpg" alt="Os primeiros passos com Raspberry Pi 3: Controlando a GPIO…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/os-primeiros-passos-com-raspberry-pi-3-controlando-gpio-por-sysfs/">Os primeiros passos com Raspberry Pi 3: Controlando a GPIO…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm11960" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://blog.usinainfo.com.br/categoria/omega2/" title="Omega2" class="menu-link">Omega2</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/primeiros-passos-com-o-onion-omega2/" title="Primeiros passos com o Onion Omega2"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/1-298x186.jpg" alt="Primeiros passos com o Onion Omega2"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/primeiros-passos-com-o-onion-omega2/">Primeiros passos com o Onion Omega2</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm11734" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children"><a href="http://blog.usinainfo.com.br/categoria/automacao-residencial/" title="Automação Residencial" class="menu-link">Automação Residencial</a><div class="sub-menu-wrapper"><div class="sub-menu five-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/controle-de-acesso-rc522-rfid-destranque-suas-portas-sem-utilizar-chaves/" title="Controle de Acesso RC522 RFID – Destranque suas portas sem…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_5077-298x186.jpg" alt="Controle de Acesso RC522 RFID – Destranque suas portas sem…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/controle-de-acesso-rc522-rfid-destranque-suas-portas-sem-utilizar-chaves/">Controle de Acesso RC522 RFID – Destranque suas portas sem…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/automacao-residencial-arduino-ideias-para-deixar-sua-casa-igual-homem-de-ferro/" title="Automação Residencial Arduino: Ideias para Deixar sua Casa Igual a…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/20150219_00-298x186.jpg" alt="Automação Residencial Arduino: Ideias para Deixar sua Casa Igual a…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/automacao-residencial-arduino-ideias-para-deixar-sua-casa-igual-homem-de-ferro/">Automação Residencial Arduino: Ideias para Deixar sua Casa Igual a…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/sistema-de-controle-de-camera-com-pan-tilt/" title="Sistema de Controle de Câmera com PAN TILT"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/pan-298x186.jpg" alt="Sistema de Controle de Câmera com PAN TILT"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/sistema-de-controle-de-camera-com-pan-tilt/">Sistema de Controle de Câmera com PAN TILT</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/controle-tudo-com-apenas-um-click-sua-casa-nunca-mais-sera-a-mesma/" title="Controle tudo com Apenas um Click! Sua Casa Nunca Mais…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/jump-298x186.jpg" alt="Controle tudo com Apenas um Click! Sua Casa Nunca Mais…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/controle-tudo-com-apenas-um-click-sua-casa-nunca-mais-sera-a-mesma/">Controle tudo com Apenas um Click! Sua Casa Nunca Mais…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/leitor-biometrico-arduino-sistema-de-cadastramento-e-leitura-de-digitais/" title="Leitor Biométrico Arduino: Sistema de Cadastramento e Leitura de Digitais"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/bio-1-298x186.jpg" alt="Leitor Biométrico Arduino: Sistema de Cadastramento e Leitura de Digitais"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/leitor-biometrico-arduino-sistema-de-cadastramento-e-leitura-de-digitais/">Leitor Biométrico Arduino: Sistema de Cadastramento e Leitura de Digitais</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div>
+<ul class="menu-links inside-menu">
+	<li id="menu-item-exm11967" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://blog.usinainfo.com.br/categoria/scadabr/" title="ScadaBR" class="menu-link">ScadaBR</a><div class="sub-menu five-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/desenvolvimento-de-sistemas-supervisorios-parte-2/" title="Desenvolvimento de sistemas supervisórios – Parte 2"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/skda-br-298x186.jpg" alt="Desenvolvimento de sistemas supervisórios – Parte 2"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/desenvolvimento-de-sistemas-supervisorios-parte-2/">Desenvolvimento de sistemas supervisórios – Parte 2</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/comunicando-o-arduino-com-o-scadabr-atraves-do-protocolo-tcpip/" title="Comunicando o Arduino com o ScadaBR através do protocolo TCP/IP"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/Capa_do_artigo-okokok-298x186.jpg" alt="Comunicando o Arduino com o ScadaBR através do protocolo TCP/IP"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/comunicando-o-arduino-com-o-scadabr-atraves-do-protocolo-tcpip/">Comunicando o Arduino com o ScadaBR através do protocolo TCP/IP</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/desenvolvimento-de-sistemas-supervisorios-parte-i/" title="Desenvolvimento de sistemas supervisórios – Parte I"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/skda-br-298x186.jpg" alt="Desenvolvimento de sistemas supervisórios – Parte I"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/desenvolvimento-de-sistemas-supervisorios-parte-i/">Desenvolvimento de sistemas supervisórios – Parte I</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/realizando-aquisicao-de-dados-do-arduino-atraves-do-scadabr/" title="Aquisição de dados do Arduino através do SCADABR"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/blog-123-298x186.jpg" alt="Aquisição de dados do Arduino através do SCADABR"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/realizando-aquisicao-de-dados-do-arduino-atraves-do-scadabr/">Aquisição de dados do Arduino através do SCADABR</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/realizando-acionamentos-no-arduino-atraves-do-scadabr/" title="Realizando Acionamentos no Arduino através do ScadaBR"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/Capa_do_artigo20-ok-298x186.jpg" alt="Realizando Acionamentos no Arduino através do ScadaBR"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/realizando-acionamentos-no-arduino-atraves-do-scadabr/">Realizando Acionamentos no Arduino através do ScadaBR</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></li>
+</ul>
+</div><span class="subsignmeni"></span></li>
+<li id="menu-item-exm11986" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://blog.usinainfo.com.br/categoria/eletronica/" title="Eletrônica" class="menu-link">Eletrônica</a><div class="sub-menu-wrapper no-children"><div class="sub-menu six-menu"><ul class="small-category"><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/carregador-portatil-para-celular-ate-onde-sua-bateria-pode-te-levar/" title="Carregador Portátil para Celular – Até onde sua Bateria pode…"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/Untitled-1.fw_-298x186.png" alt="Carregador Portátil para Celular – Até onde sua Bateria pode…"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/carregador-portatil-para-celular-ate-onde-sua-bateria-pode-te-levar/">Carregador Portátil para Celular – Até onde sua Bateria pode…</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/regulador-de-tensao-ajustavel-lm2596-step-down-dc-dc-com-display/" title="Regulador de Tensão Ajustável LM2596 Step Down DC-DC com Display"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/energy_cable-298x186.jpg" alt="Regulador de Tensão Ajustável LM2596 Step Down DC-DC com Display"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/regulador-de-tensao-ajustavel-lm2596-step-down-dc-dc-com-display/">Regulador de Tensão Ajustável LM2596 Step Down DC-DC com Display</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/regulador-de-tensao-ajustavel-lm2596-step-down-dc-dc/" title="Regulador de Tensão Ajustável LM2596 Step Down DC-DC"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/energy_cable-298x186.jpg" alt="Regulador de Tensão Ajustável LM2596 Step Down DC-DC"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/regulador-de-tensao-ajustavel-lm2596-step-down-dc-dc/">Regulador de Tensão Ajustável LM2596 Step Down DC-DC</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/fonte-ajustavel-para-protoboard-com-interruptor/" title="Fonte Ajustável para Protoboard com Interruptor"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/2046-03-298x186.jpg" alt="Fonte Ajustável para Protoboard com Interruptor"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/fonte-ajustavel-para-protoboard-com-interruptor/">Fonte Ajustável para Protoboard com Interruptor</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/fonte-ajustavel-para-protoboard-3-3v-e-5v/" title="Fonte Ajustável para Protoboard 3.3V e 5V"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/5354-battery-1920x1080-digital-art-wallpaper-298x186.jpg" alt="Fonte Ajustável para Protoboard 3.3V e 5V"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/fonte-ajustavel-para-protoboard-3-3v-e-5v/">Fonte Ajustável para Protoboard 3.3V e 5V</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li><li>
+								<div class="small-image">				
+									<a href="http://blog.usinainfo.com.br/regulador-de-tensao-lm2596-step-down-dc-dc-ajustavel-com-voltimetro/" title="Regulador de Tensão LM2596 Step Down DC-DC Ajustável com Voltímetro"><div class="image_fx3"><img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/energy_cable-298x186.jpg" alt="Regulador de Tensão LM2596 Step Down DC-DC Ajustável com Voltímetro"></div></a>
+								</div><!--small-image-->
+								<div class="small-text">																		
+									<div class="small-title">
+										<h2><a href="http://blog.usinainfo.com.br/regulador-de-tensao-lm2596-step-down-dc-dc-ajustavel-com-voltimetro/">Regulador de Tensão LM2596 Step Down DC-DC Ajustável com Voltímetro</a></h2>
+									</div><!--small-title-->
+								</div>
+								<!--small-text-->
+							</li></ul></div></div></li>
+<li id="menu-item-exm1400" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.usinainfo.com.br/" title="Loja Virtual" class="menu-link">Loja Virtual</a></li>
+</ul></div>		
+		<div class="content-social">
+			<ul>
+								<li>
+					<a href="https://www.facebook.com/faceusinainfo/" class="fb-social-icon" target="_blank">
+					</a>
+				</li>
+																				<li>
+					<a href="https://plus.google.com/+UsinainfoBrasil/posts" class="google-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="https://www.youtube.com/user/usinainfo" class="youtube-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="http://blog.usinainfo.com.br/feed/rss/" class="rss-social-icon">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--content-social-->
+						
+			</nav>
+			<!--main-nav-->
+		</div>
+		<!--navigation-->
+	</div>
+	<!--nav-wrapper-->
+</header>
+<!--header-->
+<section id="wrapper" class="hfeed">
+<div id="main" class="fullwidth-post-image" style="opacity: 1;">
+ 	
+<div class="fullwidth-image" style="max-width: 1439px; margin-left: -84.5454px;">
+	<img width="1920" height="1080" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/carro-3-1920x1080.jpg" class="attachment-fullwidth-singlepost-image size-fullwidth-singlepost-image wp-post-image" alt="">	<div id="post-page-title">
+		<h1>
+			Carrinho Arduino Controlado através de Bluetooth e Sistema Android!		</h1>
+	<div id="post-page-subtitle">
+		Quem já montou um Carrinho Arduino / Carro Robô&nbsp;com certeza se deparou com diversos problemas e barreiras durante o processo de montagem do seu projeto, chassi com perfurações diferentes,...	</div>
+	<!--post-subtitle-->
+	</div>
+	<!--post-page-title-->
+</div>
+<!--fullwidth-image-->
+
+<div id="post-1199" class="post-1199 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino">
+								<div id="primary">
+						<div class="post-page-content-wrapper">
+								<div class="post-info">
+					<span class="post-author">
+					por					<a href="http://blog.usinainfo.com.br/author/anapaula/" title="Posts de Equipe Usinainfo" rel="author">Equipe Usinainfo</a>					</span>	
+					<span class="post-page-date">
+					16/12/2016					</span>
+										<span class="post-page-views">
+						24848						Visualizações					</span>
+						
+				</div>
+				<!--post-info-->
+								<div class="floating-share-icons" style="height: 5696px;">
+	<ul style="position: fixed; top: 90.0057px; bottom: auto;">
+		<li>
+			<a href="http://www.facebook.com/sharer.php?u=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/" target="blank" class="fb-social-float-icon" title="Share this post on Facebook" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+		<li>
+			<a href="https://twitter.com/intent/tweet?original_referer=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/&amp;text=Carrinho%20Arduino%20Controlado%20atrav%C3%A9s%20de%20Bluetooth%20e%20Sistema%20Android!&amp;tw_p=tweetbutton&amp;url=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/" target="_blank" class="twitter-social-float-icon" title="Share this post on Twitter" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+		<li>
+			<a href="https://plusone.google.com/_/+1/confirm?hl=en-US&amp;url=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/" target="_blank" class="google-social-float-icon" title="Share this post on Google Plus" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+		<li>
+			<a href="http://pinterest.com/pin/create/button/?media=http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carro-3-634x460.jpg&amp;url=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/&amp;is_video=false&amp;description=Carrinho+Arduino+Controlado+atrav%C3%A9s+de+Bluetooth+e+Sistema+Android%21" target="_blank" class="pinterest-social-float-icon" title="Share this post on Pinterest" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+		<li>
+			<a href="http://www.reddit.com/submit?url=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/&amp;title=Carrinho+Arduino+Controlado+atrav%C3%A9s+de+Bluetooth+e+Sistema+Android%21" target="_blank" class="reddit-social-float-icon" title="Share this post on Reddit" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- floating-share-icons -->
+				<div id="post-content" class="content first-letter ">
+					<p>Quem já montou um <a href="http://www.usinainfo.com.br/kits-chassi-roboticos-467">Carrinho Arduino / Carro Robô</a>&nbsp;com certeza se deparou com diversos problemas e barreiras durante o processo de montagem do seu projeto, chassi com perfurações diferentes, parafusos ou espaçadores insuficientes sempre acaba faltando alguma coisa e você tem que sair correndo comprar ou esperar alguns dias pela entrega de sua compra online.</p>
+<p>Além dos clássicos problemas de incompatibilidade física, nos deparamos com diversos problemas durante o processo de desenvolvimento que no fim passam por despercebidos e que merecem sua devida atenção, seja na alimentação dos equipamentos ou na compatibilidade existente entre os mesmos.</p>
+<p>Para quem deseja desenvolver um Carrinho Arduino, as três opções mais recorrentes são pelo desenvolvimento de carrinhos seguidor de linha através de sistemas de reconhecimento infravermelho, carrinhos independentes com sistema de reconhecimento por sensor ultrassônico e por fim, os carrinhos controláveis através de dispositivos de comando externo.</p>
+<p>Pensando nisto, a <a href="http://www.usinainfo.com.br/">Usinainfo</a>&nbsp;desenvolveu um exclusivo Carrinho Arduino controlado por sistema de comunicação Bluetooth, o qual através de um dispositivo equipado com sistema Android e um aplicativo adequado, consegue realizar todos os comandos necessários para o processo de movimentação do carrinho.</p>
+<p>Comercializado de forma totalmente montada e já pronto para uso, o <a href="http://www.usinainfo.com.br/kits-chassi-roboticos/carrinho-arduino-200rpm-controlado-por-smartphone-montado-e-pronto-para-uso-parland-3757.html">Carrinho Arduino Bluetooth</a>&nbsp;necessita somente de um aplicativo específico para o seu uso, que é o Bluetooth RC Controller encontrado facilmente junto a Play Store ou através do link abaixo:</p>
+<p><a href="https://play.google.com/store/apps/details?id=braulio.calle.bluetoothRCcontroller&amp;hl=pt_BR">https://play.google.com/store/apps/details?id=braulio.calle.bluetoothRCcontroller&amp;hl=pt_BR</a></p>
+<p>De forma geral, recomendamos a utilização deste aplicativo devido a fácil interpretação e desenvolvimento do código, o qual não necessita de bibliotecas adicionais e possui comandos específicos fornecidos somente por este aplicativo em especial.</p>
+<p>Capaz de executar as mais diversificadas ações como a utilização de faróis frontais e traseiros, buzina, controle de velocidade e acionamento do pisca alerta, este aplicativo ainda possui a capacidade de conciliar comandos com o intuito de aumentar ainda mais a sua mobilidade.</p>
+<p>Desenvolver este Carrinho Arduino é um pouco complicado para quem não possui uma boa base em programação e conhecimentos fundamentais sobre a composição das portas padrão do Arduino, isto pois, existem portas com características específicas que podem acabar não atendendo a necessidade de determinados projetos e acabar dando bastante dor de cabeça.</p>
+<p>TESTE PRÁTICO</p>
+<p><iframe width="848" height="477" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/qNs-d2qgiz0.html" style="border: none" allowfullscreen=""></iframe></p>
+<p>De modo geral, a ideia foi desenvolver um Carrinho Arduino que fosse controlado pelo celular e pudesse ser de fácil montagem e utilização, recentemente disponibilizamos este carrinho já montado e pronto para uso em nosso site e agora para quem deseja por a mão na massa e construir seu próprio exemplar, estamos disponibilizando o projeto de desenvolvimento do mesmo.</p>
+<p>A quantidade de alguns itens como parafusos, espaçadores e Jumpers vão depender de como será desenvolvido o projeto e o modo utilizado para a fixação e adaptação de cada elemento do projeto no chassi do Carrinho Arduino.</p>
+<p>Vale lembrar que este carrinho já possui motores com caixa de redução de 48:1, caracterizado pela sua velocidade, porém caso prefira um carrinho com menor velocidade, mas com maior capacidade de carga, recomendamos a utilização de um motor DC com caixa de redução de 120:1.</p>
+<p>PRODUTOS UTILIZADOS NO PROJETO</p>
+<ul>
+<li><a href="http://www.usinainfo.com.br/kits-chassi-roboticos/carrinho-arduino-carro-robo-2wd-200rpm-mdf-kit-chassi-usinainfo-3663.html">1 Carrinho Arduino 2WD em MDF</a>;</li>
+<li><a href="http://www.usinainfo.com.br/drivers-para-motores/driver-duplo-ponte-h-de-motor-dc-ou-passo-hg7881-2549.html">1 Driver Duplo Ponte H</a>;</li>
+<li><a href="http://www.usinainfo.com.br/diversos/suporte-para-pilhas-aa-4-slots-3351.html">1 Suporta para Pilha AA – 4 Slot</a>;</li>
+<li><a href="http://www.usinainfo.com.br/compativeis/arduino-uno-r3-cabo-usb-ab-arduino-3513.html">1 Arduino UNO R3 + Cabo USB</a>;</li>
+<li><a href="http://www.usinainfo.com.br/modulos-para-arduino/bluetooth-arduino-hc-06-jy-mcu-slave-2826.html">1 Bluetooth HC-05</a>;</li>
+<li><a href="http://www.usinainfo.com.br/modulos-para-arduino/modulo-buzzer-ativo-p15-3561.html">1 Buzzer</a>;</li>
+<li><a href="http://www.usinainfo.com.br/cabos/conector-de-bateria-9v-para-p4-ideal-para-arduino-2571.html">1 Conector de Bateria 9V para P4</a>;</li>
+<li><a href="http://www.usinainfo.com.br/baterias/pilha-aa-15v-pequena-de-zinco-carbono-philips-kit-com-4-unidades-3576.html">Pilha AA 1,5V – Kit com 4 Unidades </a>;</li>
+<li><a href="http://www.usinainfo.com.br/baterias/bateria-9v-super-panasonic-2448.html">Bateria 9V Alcalina</a>;</li>
+<li><a href="http://www.usinainfo.com.br/barras-de-pinos/barra-de-pinos-1x40-vias-145mm-90-macho-preto-3848.html">Barra de pinos 90º 14,5mm</a>;</li>
+<li><a href="http://www.usinainfo.com.br/parafusos-e-fixadores/parafuso-m3-x-10mm-metalico-kit-com-10-unidades-2926.html">Parafuso Metálico M3x10mm</a>;</li>
+<li><a href="http://www.usinainfo.com.br/parafusos-e-fixadores/parafuso-m3-x-6mm-metalico-kit-com-10-unidades--2925.html">Parafuso Metálico M3x6mm</a>;</li>
+<li><a href="http://www.usinainfo.com.br/parafusos-e-fixadores/parafuso-plastico-em-nylon-m3-x-5mm-phillips-branco-kit-com-10-unidades-2559.html">Parafuso Plástico M3x5mm</a>;</li>
+<li><a href="http://www.usinainfo.com.br/parafusos-e-fixadores/espacador-plastico-sextavado-em-nylon-m3-x-6mm-pcb-femea-x-femea-kit-com-10-unidades-2566.html">Espaçador Plástico M3x6mm</a>;</li>
+<li><a href="http://www.usinainfo.com.br/protoboard-e-jumpers/jumper-para-protoboard-femea-femea-40-pcs-20cm-2612.html">Jumpers</a>.</li>
+</ul>
+<p>&nbsp;</p>
+<p>MONTAGEM FÍSICA (HARDWARE)</p>
+<p>Para realizar a conexão correspondente ao projeto, basta observar com atenção o esquema abaixo e reproduzir em seu projeto a pinagem utilizada, lembrando que esta montagem está diretamente relacionado ao código e qualquer mudança na montagem física deve resultar também em uma mudança junto ao código.</p>
+<p>Vale ressaltar algumas informações importantes que devem ser consideradas no processo de montagem do Carrinho Arduino, a principal delas diz respeito á alimentação dos motores que trabalham em conjunto ao Arduino, ou seja, precisam ter um elemento comum que normalmente é utilizado as conexões de aterramento para estabelecer esta relação.</p>
+<p>Outro dado importante é quanto à conexão do <a href="http://www.usinainfo.com.br/modulos-para-arduino/bluetooth-arduino-hc-06-jy-mcu-slave-2826.html">Módulo Bluetooth</a>&nbsp;que deve ser realizada conectando o pino TX em RX e o pino RX em TX lembrando que, sempre que for realizado o processo de gravação junto ao Arduino, estes pinos de comunicação devem estar desconectados do equipamento.</p>
+<p><a href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/carrinho.jpg" data-rel="lightbox-0" title=""><img class="alignnone wp-image-1200" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/carrinho.jpg" alt="carrinho" width="903" height="681" srcset="http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carrinho.jpg 4272w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carrinho-300x226.jpg 300w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carrinho-768x580.jpg 768w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carrinho-1024x773.jpg 1024w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carrinho-320x240.jpg 320w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carrinho-322x242.jpg 322w" sizes="(max-width: 903px) 100vw, 903px"></a></p>
+<p>FUNCIONAMENTO DO PROGRAMA (SOFTWARE)</p>
+<p><strong>Download do código de funcionamento: <a href="https://www.usinainfo.com.br/index.php?controller=attachment&amp;id_attachment=494"><u>DOWNLOAD AQUI</u>.</a></strong></p>
+<p>Logo de saída temos uma informação muito importa que sem ela você não pode dar continuidade à utilização do seu produto, com o intuito de auxiliar o controlador e aumentar ainda mais a segurança de seu equipamento o módulo bluetooth possui uma senha que pode ser facilmente alterada através de um uma programação adequada, mas que como padrão é 1234.</p>
+<p>Desenvolvido com um sistema de interação total para o controle de carrinhos, o Bluetooth Arduino RC Car é capaz de executar algumas funções extremamente simples, mas que fazem a total diferença quando pensando no projeto como um todo.</p>
+<p>Além dos comandos direcionais, o Carrinho Arduino em conjunto com o referente aplicativo pode acessar o acelerômetro de seu celular para se movimentar através de variações no espaço, ou seja, uma leve inclinação do celular pode determinar qual direção o carrinho irá tomar.</p>
+<p>Para melhor entender cada função e identificar como encontrar cada uma delas, observe a figura a baixo com a indicação de cada comando possível pelo aplicativo utilizado em nosso projeto, lembrando eu para nosso projeto, utilizamos somente o comando da buzina e setas de movimento.</p>
+<p>&nbsp;</p>
+<p><a href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/app-car.jpg" data-rel="lightbox-1" title=""><img class="alignnone wp-image-1202" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/app-car.jpg" alt="app-car" width="857" height="482" srcset="http://blog.usinainfo.com.br/wp-content/uploads/2016/12/app-car.jpg 1600w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/app-car-300x169.jpg 300w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/app-car-768x432.jpg 768w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/app-car-1024x576.jpg 1024w" sizes="(max-width: 857px) 100vw, 857px"></a></p>
+<p>Ao entrar em Opções, você irá encontrar quatro funções utilizadas para realizar a configuração e a conexão de seu aplicativo junto ao módulo Bluetooth instalado em seu projeto, veja em detalhes as quatro funções:</p>
+<ul>
+<li><strong>Connert</strong>: Auxilia na conexão do seu smartphone junto ao seu carrinho através de comunicação bluetooth.</li>
+<li><strong>Accelerometer</strong>: Altera o modo de controle para o sistema automático sensível ao movimento, ou seja, conecta o seu aplicativo ao acelerômetro de seu celular e torna possível esta incrível funcionalidade.</li>
+<li><strong>Settings</strong>: Esta guia de configurações torna possível algumas configurações fundamentais como podemos ver logo a baixo e exibe todos os caracteres utilizados por cada ação do aplicativo, isto para lhe auxiliar no momento da programação e tornar o seu trabalho ainda mais fácil.</li>
+</ul>
+<p><a href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/1.jpg" data-rel="lightbox-2" title=""><img class="alignnone wp-image-1207" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/1.jpg" alt="1" width="728" height="409" srcset="http://blog.usinainfo.com.br/wp-content/uploads/2016/12/1.jpg 1600w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/1-300x169.jpg 300w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/1-768x432.jpg 768w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/1-1024x576.jpg 1024w" sizes="(max-width: 728px) 100vw, 728px"></a></p>
+<p><a href="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/2222.jpg" data-rel="lightbox-3" title=""><img class="alignnone wp-image-1208" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/2222.jpg" alt="2222" width="730" height="410" srcset="http://blog.usinainfo.com.br/wp-content/uploads/2016/12/2222.jpg 1600w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/2222-300x169.jpg 300w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/2222-768x432.jpg 768w, http://blog.usinainfo.com.br/wp-content/uploads/2016/12/2222-1024x576.jpg 1024w" sizes="(max-width: 730px) 100vw, 730px"></a></p>
+<ul>
+<li><strong>Close</strong>: Por fim, o comando responsável por fechar o aplicativo, lembrando que fechar o aplicativo não irá desligar o Bluetooth de seu celular, caso queira economizar a sua bateria, deve acessar as configurações de seu equipamento e desligar a funcionalidade.</li>
+</ul>
+<p>De modo geral, o Carrinho Arduino é um produto de fácil desenvolvimento e ainda mais fácil utilização, se seguir todos os passos presente no esquema de ligação não terá erro e só precisará se preocupar em se divertir pilotando este exclusivo produto Usinainfo.</p>
+<p>Além de possuir um código simples e de fácil entendimento que não necessita de includes, o projeto do Carrinho Arduino pode ser facilmente adaptado para incluir LEDs atribuídos às sinaleiras e diversos outros equipamentos para complementar o seu carrinho robô.</p>
+				</div>
+				<!--post-content-->
+																<div class="post-categories-wrapper"><div class="post-categories-title">Categorias</div><span class="blog-post-categories"><a href="http://blog.usinainfo.com.br/categoria/arduino/">Arduino</a></span></div><!--post-categories-wrapper-->								<div class="share-post" style="">
+					<div class="share-title" style="">
+						Compartilhar					</div>
+					<ul style="width: 807px;">
+						<li>
+							<a href="http://www.facebook.com/sharer.php?u=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/" target="blank" class="fb-share-icon" title="Share this post on Facebook" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/intent/tweet?original_referer=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/&amp;text=Carrinho%20Arduino%20Controlado%20atrav%C3%A9s%20de%20Bluetooth%20e%20Sistema%20Android!&amp;tw_p=tweetbutton&amp;url=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/" target="_blank" class="twitter-share-icon" title="Share this post on Twitter" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+						<li>
+							<a href="https://plusone.google.com/_/+1/confirm?hl=en-US&amp;url=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/" target="_blank" class="google-share-icon" title="Share this post on Google Plus" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+						<li>
+							<a href="http://pinterest.com/pin/create/button/?media=http://blog.usinainfo.com.br/wp-content/uploads/2016/12/carro-3-634x460.jpg&amp;url=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/&amp;is_video=false&amp;description=Carrinho+Arduino+Controlado+atrav%C3%A9s+de+Bluetooth+e+Sistema+Android%21" target="_blank" class="pinterest-share-icon" title="Share this post on Pinterest" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+						<li>
+							<a href="http://www.reddit.com/submit?url=http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/&amp;title=Carrinho+Arduino+Controlado+atrav%C3%A9s+de+Bluetooth+e+Sistema+Android%21" target="_blank" class="reddit-share-icon" title="Share this post on Reddit" onclick="window.open(this.href,&#39;window&#39;,&#39;width=640,height=480,resizable,scrollbars,toolbar,menubar&#39;) ;return false;">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--share-post-->
+																<div class="nav-next-prev">
+										<div class="nav-previous">
+						<div class="previous-article">
+														<a href="http://blog.usinainfo.com.br/sistema-de-controle-de-camera-com-pan-tilt/" rel="prev">&lt;&lt; Anterior</a>						</div>
+						<!--previous-article-->
+						<div class="previous-title">
+							<h2>
+								<a href="http://blog.usinainfo.com.br/sistema-de-controle-de-camera-com-pan-tilt/" rel="prev">Sistema de Controle de Câmera com PAN TILT</a>							</h2>
+							<div class="post-date">
+								<span class="bypostauthor">
+								por								<a href="http://blog.usinainfo.com.br/author/anapaula/">
+								Equipe Usinainfo								</a>
+								-
+								</span>
+								<span class="date-prev">
+								dez 5, 2016								</span>
+							</div>
+							<!--post-date-->
+						</div>
+						<!--previous-title-->
+					</div>
+					<!--nav-previous-->
+										<div class="splitter">
+					</div>
+					<!--splitter-->
+										<div class="nav-next">
+						<div class="next-article">
+														<a href="http://blog.usinainfo.com.br/o-que-e-arduino-de-onde-vem-do-que-se-alimenta/" rel="next">Próximo &gt;&gt;</a>						</div>
+						<!--next-article-->
+						<div class="next-title">
+							<h2>
+								<a href="http://blog.usinainfo.com.br/o-que-e-arduino-de-onde-vem-do-que-se-alimenta/" rel="next">O que é Arduino? De onde vem? Do que se alimenta?</a>							</h2>
+							<div class="post-date">
+								<span class="bypostauthor">
+								por								<a href="http://blog.usinainfo.com.br/author/anapaula/">
+								Equipe Usinainfo								</a>
+								-
+								</span>
+								<span class="date-next">
+								mar 21, 2017								</span>
+							</div>
+							<!--post-date-->
+						</div>
+						<!--next-title-->
+					</div>
+					<!--nav-next-->
+									</div>
+				<!--nav-next-prev-->
+												<div id="author-info">
+					<div id="author-image">
+						<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99.png" class="avatar avatar-96 photo" height="96" width="96">					</div>
+					<!--author-image-->
+					<div id="author-desc">
+						<h2>
+							<a href="http://blog.usinainfo.com.br/author/anapaula/" title="Posts de Equipe Usinainfo" rel="author">Equipe Usinainfo</a>						</h2>
+						<div class="description-author">
+													</div>
+						<!--description-author-->
+						<ul class="author-social">
+																																									</ul>
+					</div>
+					<!--author-desc-->
+				</div>
+				<!--author-info-->
+												<div class="comments">
+					<div class="comment-count">
+	34 Número de Comentários</div>
+<!--comment-count-->
+
+<div class="discussion">
+	
+<li class="comment even thread-even depth-1" id="li-comment-74">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/62085436524296bf12b0d80b286f737f.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Johne71	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		4 Março 2017		at
+		02:28	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-74" onclick="return addComment.moveForm( &quot;comment-74&quot;, &quot;74&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Johne71">Enviar Resposta</a>	<article id="comment-74" class="comment">
+		<div class="comment-content content">
+			<p>Very nice post. I certainly appreciate this website.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-75">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/c12f7464115d472c378a19ef90e1f275.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Smithd213	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		4 Março 2017		at
+		02:30	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-75" onclick="return addComment.moveForm( &quot;comment-75&quot;, &quot;75&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Smithd213">Enviar Resposta</a>	<article id="comment-75" class="comment">
+		<div class="comment-content content">
+			<p>I’ve read some excellent stuff here. Definitely price bookmarking for revisiting. I surprise how much effort you place to create this type of great informative site. </p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+
+<li class="comment even thread-even depth-1" id="li-comment-491">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/b59f287470848dd9548ac141e9e7bf41.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		,	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		25 outubro 2017		at
+		23:00	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-491" onclick="return addComment.moveForm( &quot;comment-491&quot;, &quot;491&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para ,">Enviar Resposta</a>	<article id="comment-491" class="comment">
+		<div class="comment-content content">
+			<p>Olá usinainfo! Agradeço e parabenizo o projeto!! Preciso de ajuda com um carrinho 4WD, se eu utilizar o mesmo componente e colocar mais um driver duplo pont H para as outras duas rodas, funcionaria ? Estou procurando fazer com componentes mais simples.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-521">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		31 outubro 2017		at
+		13:24	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-521" onclick="return addComment.moveForm( &quot;comment-521&quot;, &quot;521&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-521" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde!<br>
+Sim, a implementação de mais um Drive igual ao utilizado para o controle dos motores é fundamental caso opte por este modelo. Caso esteja pensando em utilizar os mesmos comandos para as rodas de frene e de trás, indico inclusive a utilização de um outro Drive com maior capacidade de corrente e que consiga controlar neste caso, dois motores por canal. Lembramos que qualquer mudança deve ser pensada levando em consideração a corrente e a tensão dos equipamentos utilizados, podendo ser necessários incluir mais pilhas / baterias ou até mesmo algum outro componente ao projeto. Att Equipe UsinaInfo</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-525">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/aec03fc75dcabc041a5a226f41e9909e.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Claudio avila	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		31 outubro 2017		at
+		14:11	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-525" onclick="return addComment.moveForm( &quot;comment-525&quot;, &quot;525&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Claudio avila">Enviar Resposta</a>	<article id="comment-525" class="comment">
+		<div class="comment-content content">
+			<p>Como ficaria a ligação usando um driver l293d? Montei um carrinho usando esse tutorial mas não estou conseguindo fazer funcionar.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-527">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		31 outubro 2017		at
+		19:42	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-527" onclick="return addComment.moveForm( &quot;comment-527&quot;, &quot;527&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-527" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde! A utilização vai depender do driver que está utilizando, Shield ou módulo, vale lembrar que se está utilizando um módulo com alimentação externa precisa lembrar de estabelecer um negativo comum entre os elementos do seu projeto. Caso optou por não incluir algum tipo de alimentação externa vale lembrar que existe a possibilidade de não estar havendo corrente suficiente para alimentar seu equipamento Arduino e os Motores.<br>
+Att Equipe UsinaInfo</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-even depth-1" id="li-comment-546">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/acd819df51cbe99fc7f82900f8ce11e0.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		vin Santos	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		3 novembro 2017		at
+		19:31	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-546" onclick="return addComment.moveForm( &quot;comment-546&quot;, &quot;546&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para vin Santos">Enviar Resposta</a>	<article id="comment-546" class="comment">
+		<div class="comment-content content">
+			<p>Olá.<br>
+Estou montando um projeto com dois Shields L298, pois preciso de três motores, e gostaria de saber como fica a alimentação do Arduino, já que percebi que na montagem a bateria está ligada somente ao Shield. Tentei adequar essa montagem ao meu modelo mas não funcionou. E tb quais seriam as modificações necessárias no sketch, já que usarei a função da luz dianteira para o terceiro motor que ficará em rotação constante.<br>
+Obrigado desde já.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-581">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		7 novembro 2017		at
+		18:04	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-581" onclick="return addComment.moveForm( &quot;comment-581&quot;, &quot;581&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-581" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde! Você precisa ter em mente inicialmente que a tensão de alimentação Arduino é de aproximadamente 9V e os motores necessitam de uma alimentação de 6V, ou seja, para alimentar o Arduino você pode utilizar uma bateria 9V, quanto aos motores eles necessitam de uma alimentação externa para fornecer a corrente necessária de funcionamento, esta tensão de entrada pode variar de acordo com o Shield utilizado.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-547">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/acd819df51cbe99fc7f82900f8ce11e0.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Vin santos	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		3 novembro 2017		at
+		23:10	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-547" onclick="return addComment.moveForm( &quot;comment-547&quot;, &quot;547&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Vin santos">Enviar Resposta</a>	<article id="comment-547" class="comment">
+		<div class="comment-content content">
+			<p>Olá UsinaInfo,<br>
+Primeiramente parabéns pelo projeto, serviu como uma ótima base para o meu.<br>
+Gostaria de tirar uma dúvida, ao invés do L293, optei por um L298. Como preciso de três motores, estou usando dois, gostaria de saber como funciona a alimentação do Arduino, pois percebi que segundo a instalação, ele não possui uma alimentação direta. O meu só funciona quando conectado no notebbok.<br>
+Agradeço desde já.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-572">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		6 novembro 2017		at
+		16:30	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-572" onclick="return addComment.moveForm( &quot;comment-572&quot;, &quot;572&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-572" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde!<br>
+Nos esquemas desenvolvidos e disponibilizados junto aos projetos de Arduino não costumamos apresentar a forma de alimentação que varia de acordo com o cliente, pode ser através do cabo USB que é o caso que está utilizando, ou com fonte de alimentação através do conector P4, estas fontes de alimentação podem ser desde transformadores comuns conectados à tomadas como baterias 9V, por exemplo, que supram a necessidade do seu projeto.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-even depth-1" id="li-comment-560">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/d6ff61ddc449666e2fd5d524cdaf327a.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Abraão	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		5 novembro 2017		at
+		17:10	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-560" onclick="return addComment.moveForm( &quot;comment-560&quot;, &quot;560&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Abraão">Enviar Resposta</a>	<article id="comment-560" class="comment">
+		<div class="comment-content content">
+			<p>Qual app posso usar num projeto de esteira? pois não há articulação como nos carros, esse app dispõe de botões para articulação de rodas dianteiras, no meu caso usarei em robô esteira.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-573">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		6 novembro 2017		at
+		16:32	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-573" onclick="return addComment.moveForm( &quot;comment-573&quot;, &quot;573&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-573" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde! Caso deseje, pode utilizar este mesmo APP, basta alterar o código para que supra suas necessidades, cada botão do APP possui um caractere específico que quando reconhecido pelo Arduino executa uma determinada ação, com isto você já consegue desenvolver um projeto do seu modo.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-577">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/9b350d1e0c6e53a48984a6a8c6eb9acb.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Danilo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		7 novembro 2017		at
+		02:07	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-577" onclick="return addComment.moveForm( &quot;comment-577&quot;, &quot;577&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Danilo">Enviar Resposta</a>	<article id="comment-577" class="comment">
+		<div class="comment-content content">
+			<p>Olá, Bom dia! Estou fazendo o mesmo projeto, porém usando um Lm298N, porém tenho dúvidas de como a velocidade será controlada por essa ponte H.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-592">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		9 novembro 2017		at
+		13:23	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-592" onclick="return addComment.moveForm( &quot;comment-592&quot;, &quot;592&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-592" class="comment">
+		<div class="comment-content content">
+			<p>Bom dia!<br>
+A velocidade é controlada através dos pinos PWM do seu Arduino, por isto vale cuidar este detalhe na hora de realizar o seu projeto.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-even depth-1" id="li-comment-620">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/aa153467b6d4d36545023beb64e47a59.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		João Pedro	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		14 novembro 2017		at
+		13:09	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-620" onclick="return addComment.moveForm( &quot;comment-620&quot;, &quot;620&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para João Pedro">Enviar Resposta</a>	<article id="comment-620" class="comment">
+		<div class="comment-content content">
+			<p>Bom dia, estou fazendo esse projeto com base nas informações desse site e estou tendo alguns problemas. Não conseguir achar na minha cidade esse shield que controla os motores, então optei pelo Lm298 (vi outros projetos que exercem a mesma função usando esse shield). Estou seguindo corretamente a montagem e usanndo o mesmo app de Bluetooth, porém eu só consigo acionar a buzina com o buzzer. Os movimentos do carrinho quando eu dou o comando não acontecem absolutamente nada. Gostaria de uma dica para qual seria o erro que estou cometendo, e por favor o mais rápido possível<br>
+Muito obrigado pela atenção</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-625">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		16 novembro 2017		at
+		13:50	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-625" onclick="return addComment.moveForm( &quot;comment-625&quot;, &quot;625&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-625" class="comment">
+		<div class="comment-content content">
+			<p>Bom dia João Pedro, você incluiu alimentação para os motores separada do Arduino para suprir a carga dos mesmos? Utilizou o pino negativo comum interligando o Arduino, o módulo e o porta baterias? Utilizou os mesmos pinos PWM? Verificou o funcionamento individualizado de cada um dos equipamentos para verificar se algum deles não demonstra algum tipo de defeito?</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-621">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/f823ef1970c26159cf8e913519dfcdf9.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		João Vitor	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		14 novembro 2017		at
+		13:25	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-621" onclick="return addComment.moveForm( &quot;comment-621&quot;, &quot;621&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para João Vitor">Enviar Resposta</a>	<article id="comment-621" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde Usinainfo. Parabéns pelo projeto! Estou abdicando dele mas eu optei por usar a ponte H L298.. o buzzer respondeu aos comandos do celular  (bluetooth), porém, os motores não estão sendo acionados.. estou usando uma fonte de 9v no arduino APENAS,precisaria de uma voltagem maiores os motores, ou a programação vai mudar para a ponte H escolhida ?<br>
+obrigado, Boa tarde.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-624">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		16 novembro 2017		at
+		13:48	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-624" onclick="return addComment.moveForm( &quot;comment-624&quot;, &quot;624&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-624" class="comment">
+		<div class="comment-content content">
+			<p>Bom dia João Vitor, é necessária a utilização de uma fonte externa para os motores, somente a alimentação do Arduino não consegue dar conta de executar suas funções e alimentar os motores, fazendo com que os mesmos não executem suas funções normalmente.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-even depth-1" id="li-comment-638">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/97798f750f10e9a282a44f1aad7497f6.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Diego	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		28 novembro 2017		at
+		11:58	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-638" onclick="return addComment.moveForm( &quot;comment-638&quot;, &quot;638&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Diego">Enviar Resposta</a>	<article id="comment-638" class="comment">
+		<div class="comment-content content">
+			<p>Tentei montar o carrinho conforme as instruções, porém quando ligo os componentes e coloco o código fornecido no arduino ele começa girar as rodas, mas os comandos do bluetooth não funciona. Poderia me ajudar nesta questão por favor?</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-644">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		30 novembro 2017		at
+		16:43	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-644" onclick="return addComment.moveForm( &quot;comment-644&quot;, &quot;644&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-644" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde!<br>
+Verifique as conexões dos seus pinos para constatar se não possuem pinos desconectados, comumente este problema ocorre devido ao fato de um dos polos do motor estar desconectado e não estar identificando o valor do pino Arduino.<br>
+Att Equipe UsinaInfo</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-657">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/e5e76a1dd486492cfd494e41cc4ef85b.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Rogério Macedo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		12 dezembro 2017		at
+		22:43	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-657" onclick="return addComment.moveForm( &quot;comment-657&quot;, &quot;657&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Rogério Macedo">Enviar Resposta</a>	<article id="comment-657" class="comment">
+		<div class="comment-content content">
+			<p>Boa noite, segui o projeto com um chassis próprio feiro com pvc e micromotores polulu, que trabalham com 6v à 12v.<br>
+Segui a programação e não tive nenhum problema com o carrinho. Funciona perfeitamente. Estou usando um pac com 3 bateiras de<br>
+LiOn de 3,7 v cada alimentando o Arduíno Uno e o Lm 298. Parabéns pelo projeto.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-661">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		13 dezembro 2017		at
+		13:08	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-661" onclick="return addComment.moveForm( &quot;comment-661&quot;, &quot;661&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-661" class="comment">
+		<div class="comment-content content">
+			<p>Que bom Rogério!</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-even depth-1" id="li-comment-690">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/16b6bb679d977997bbf888c876350760.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		joão	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		23 Janeiro 2018		at
+		12:39	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-690" onclick="return addComment.moveForm( &quot;comment-690&quot;, &quot;690&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para joão">Enviar Resposta</a>	<article id="comment-690" class="comment">
+		<div class="comment-content content">
+			<p>olá! posso usar motorzinho de dvd nesse carrinho? achei meio caro os motores com redutor ;-;</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-698">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		25 Janeiro 2018		at
+		18:01	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-698" onclick="return addComment.moveForm( &quot;comment-698&quot;, &quot;698&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-698" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde!<br>
+As adaptações ficam por conta de quem está desenvolvendo o projeto, até o momento não testamos com motores de DVD, existem diversos fatores como velocidade e variação de PWM que podem influenciar no seu projeto com outro motor, verifique a possibilidade e após testar se quiser compartilhar sua experiência conosco estamos ansiosos para saber o resultado do seu projeto.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-691">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/16b6bb679d977997bbf888c876350760.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		joão	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		23 Janeiro 2018		at
+		12:45	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-691" onclick="return addComment.moveForm( &quot;comment-691&quot;, &quot;691&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para joão">Enviar Resposta</a>	<article id="comment-691" class="comment">
+		<div class="comment-content content">
+			<p>como vou conectar a pilha no gnd e no relay module ao mesmo tempo?</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-694">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		24 Janeiro 2018		at
+		17:07	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-694" onclick="return addComment.moveForm( &quot;comment-694&quot;, &quot;694&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-694" class="comment">
+		<div class="comment-content content">
+			<p>Boa tarde!<br>
+Quando desenvolvemos o referente projeto, utilizamos o fio que sai do porta pilhas e soldamos duas metades de jumper Premium 20cm junto ao mesmo, deste modo conectamos um jumper ao módulo drive e outra no GND do Arduino.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-even depth-1" id="li-comment-748">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/e492de3d3ee934e3c8cf492757be4aa4.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Taciano	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		10 Março 2018		at
+		17:54	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-748" onclick="return addComment.moveForm( &quot;comment-748&quot;, &quot;748&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Taciano">Enviar Resposta</a>	<article id="comment-748" class="comment">
+		<div class="comment-content content">
+			<p>Amigo o modulo bluetooth classe 1 Rn41 serve no lugar do Hc06?</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-753">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		16 Março 2018		at
+		13:19	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-753" onclick="return addComment.moveForm( &quot;comment-753&quot;, &quot;753&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-753" class="comment">
+		<div class="comment-content content">
+			<p>Olá!<br>
+Para garantir a total compatibilidade e evitar alterações no projeto é recomendada a utilização do Módulo Bluetooth HC-06.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-814">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/40ff395bd6dc25054859cb8ffb42cf3c.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		paulo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		1 Maio 2018		at
+		14:52	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-814" onclick="return addComment.moveForm( &quot;comment-814&quot;, &quot;814&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para paulo">Enviar Resposta</a>	<article id="comment-814" class="comment">
+		<div class="comment-content content">
+			<p>ola quero fazer o mesmo com 4 motores e o drive ld293 o que eu tenho que fazer com o codigo para funcionar?</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-824">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		10 Maio 2018		at
+		12:57	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-824" onclick="return addComment.moveForm( &quot;comment-824&quot;, &quot;824&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-824" class="comment">
+		<div class="comment-content content">
+			<p>Bom dia Paulo!<br>
+Você deverá incluir novas variáveis correspondentes aos motores e verificar quanto as velocidades e movimentos que cada roda irá executar.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-even depth-1" id="li-comment-829">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/ee5fc331ca23b302040bd8c3891a1f28.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Felipe Augusto Severino	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		11 Maio 2018		at
+		04:04	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-829" onclick="return addComment.moveForm( &quot;comment-829&quot;, &quot;829&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Felipe Augusto Severino">Enviar Resposta</a>	<article id="comment-829" class="comment">
+		<div class="comment-content content">
+			<p>Boa Noite, esta dando o seguinte erro e sou iniciante como devo prosseguir:<br>
+Arduino: 1.8.5 (Windows 7), Placa:”Arduino/Genuino Uno”</p>
+<p>O sketch usa 3458 bytes (10%) de espaço de armazenamento para programas. O máximo são 32256 bytes.<br>
+Variáveis globais usam 214 bytes (10%) de memória dinâmica, deixando 1834 bytes para variáveis locais. O máximo são 2048 bytes.<br>
+avrdude: ser_open(): can’t open device “\\.\COM1”: O sistema não pode encontrar o arquivo especificado.</p>
+<p>Problema ao carregar para a placa. Veja <a href="http://www.arduino.cc/en/Guide/Troubleshooting#upload" rel="nofollow">http://www.arduino.cc/en/Guide/Troubleshooting#upload</a> para sugestões.</p>
+<p>Este relatório teria mais informações com<br>
+“Mostrar a saida detalhada durante a compilação”<br>
+opção pode ser ativada em “Arquivo -&gt; Preferências”</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-842">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		17 Maio 2018		at
+		14:07	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-842" onclick="return addComment.moveForm( &quot;comment-842&quot;, &quot;842&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-842" class="comment">
+		<div class="comment-content content">
+			<p>Olá! Neste caso, se não foi selecionada a COM correspondente ao Arduino que está utilizando banta selecioná-la, porém caso não exista a opção correspondente, será necessário a instalação de um drive compatível com o equipamento Arduino utilizado.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-832">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/e8360962d74cd6c066e7a6cd79c5bb40.png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		dAVI lEÃO	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		11 Maio 2018		at
+		23:45	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-832" onclick="return addComment.moveForm( &quot;comment-832&quot;, &quot;832&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para dAVI lEÃO">Enviar Resposta</a>	<article id="comment-832" class="comment">
+		<div class="comment-content content">
+			<p>Olá, estou tendo o seguinte com o código: Arduino: 1.8.5 (Windows 8.1), Board: “Arduino/Genuino Uno”</p>
+<p>c:\program files\arduino-1.8.5\hardware\tools\avr\bin\../lib/gcc/avr/4.9.2/../../../../avr/bin/ar.exe: unable to rename ‘core\core.a’; reason: File exists</p>
+<p>exit status 1<br>
+Error compiling for board Arduino/Genuino Uno.</p>
+<p>This report would have more information with<br>
+“Show verbose output during compilation”<br>
+option enabled in File -&gt; Preferences.</p>
+<p>Como eu posso resolver? Será que alguém pode me ajudar?</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<ul class="children">
+
+<li class="comment byuser comment-author-anapaula bypostauthor odd alt depth-2" id="li-comment-840">
+	<div class="gravatar-comment">
+		<img alt="" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/112b5a6a7222d0aa1b1ec50ba29cbc99(1).png" class="avatar avatar-60 photo" height="60" width="60">	</div>
+	<!--gravatar-comment-->
+	<div class="comment-author-name">
+		Equipe Usinainfo	</div>
+	<!--comment-author-name-->
+	<div class="comment-date-time">
+		17 Maio 2018		at
+		14:00	</div>
+	<!--comment-date-time-->
+	<a rel="nofollow" class="comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comment-840" onclick="return addComment.moveForm( &quot;comment-840&quot;, &quot;840&quot;, &quot;respond&quot;, &quot;1199&quot; )" aria-label="Responder para Equipe Usinainfo">Enviar Resposta</a>	<article id="comment-840" class="comment">
+		<div class="comment-content content">
+			<p>Bom dia Davi!<br>
+Até o momento não tive o referente problema, pesquisando em alguns canais de suporte da empresa Arduino, encontrei pessoas que relataram o referente problema e solucionaram ora desativando o antivírus (não sei se é uma opção válida, mas vale testar), ora executando o Arduino como Administrador, para autorizar a alteração em pastas e arquivos do referente computador.</p>
+		</div>
+	</article>
+	<!--comment-->
+</li>
+<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+	<div class="comment-pagination">
+			</div>
+	<!--comment-pagination-->
+</div>
+<!--discussion-->
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Enviar Resposta <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#respond" style="display:none;">Cancelar Resposta</a></small></h3>			<form action="http://blog.usinainfo.com.br/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="novalidate">
+				<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true"></textarea></p><p class="comment-author"><label for="author">Nome</label> <span class="required" aria-required="true">*</span><input id="author" name="author" type="text" value="" size="30" aria-required="&#39;true&#39;"></p>
+<p class="comment-email"><label for="email">E-mail</label> <span class="required" aria-required="true">*</span><input id="email" name="email" type="text" value="" size="30" aria-required="&#39;true&#39;"></p>
+<p class="comment-url"><label for="url">Site</label><input id="url" name="url" type="text" value=""></p>
+<p class="cptch_block"><script class="cptch_to_remove" type="text/javascript">
+						(function( d, tag, id ) {
+							var script = d.getElementById( id );
+							if ( script )
+								return;
+							add_script( "", "", id );
+
+							if ( typeof( cptch_vars ) == "undefined" ) {
+								var local = {
+									nonce:     "121162a26d",
+									ajaxurl:   "http://blog.usinainfo.com.br/wp-admin/admin-ajax.php",
+									enlarge:   ""
+								};
+								add_script( "", "/* <![CDATA[ */var cptch_vars=" + JSON.stringify( local ) + "/* ]]> */" );
+							}
+
+							d.addEventListener( "DOMContentLoaded", function() {
+								var scripts         = d.getElementsByTagName( tag ),
+									captcha_script  = /http:\/\/blog.usinainfo.com.br\/wp-content\/plugins\/captcha\/js\/front_end_script.js/,
+									include_captcha = true;
+								if ( scripts ) {
+									for ( var i = 0; i < scripts.length; i++ ) {
+										if ( scripts[ i ].src.match( captcha_script ) ) {
+											include_captcha = false;
+											break;
+										}
+									}
+								}
+								if ( typeof jQuery == "undefined" ) {
+									var siteurl = "http://blog.usinainfo.com.br";
+									add_script( siteurl + "/wp-includes/js/jquery/jquery.js" );
+									add_script( siteurl + "/wp-includes/js/jquery/jquery-migrate.min.js" );
+								}
+								if ( include_captcha )
+									add_script( "http://blog.usinainfo.com.br/wp-content/plugins/captcha/js/front_end_script.js" );
+							});
+
+							function add_script( url, content, js_id ) {
+								url     = url     || "";
+								content = content || "";
+								js_id   = js_id   || "";
+								var script = d.createElement( tag );
+								if ( url )
+									script.src = url;
+								if ( content )
+									script.appendChild( d.createTextNode( content ) );
+								if ( js_id )
+									script.id = js_id;
+								script.setAttribute( "type", "text/javascript" );
+								d.body.appendChild( script );
+							}
+						})( document, "script", "cptch_script_loader" );
+					</script><span class="cptch_wrap cptch_math_actions">
+				<label class="cptch_label" for="cptch_input_90"><span class="cptch_span"><input id="cptch_input_90" class="cptch_input cptch_wp_comments" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"></span>
+					<span class="cptch_span">&nbsp;+&nbsp;</span>
+					<span class="cptch_span"><img class="cptch_img " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF////m5ubAAAAysrKZGRkJycn4uLi8/Pz4CtFhgAABmNJREFUeNrs3AtqXUcQRdHXn9s1/xkHTEKcyBG0JExUZ+0hmMWxqnXt11R0L38EAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAAQAAP4IABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJA6QBe/9cWANkADgAWAAALAIAFAMACAGABALAAAFgAACwAABYAAAsAgAUAwAIAYAEAsAAAWAAALAAAFgAACwCABQDAAgBgAQCwAABYAAAsAAAWAAALAIAFAOBbAdgARAP4ln8DAPBl1QAgG8AEIBrAACAbwANANIA1AYgGsAGIBvBdB+A7Anh+VytgAPw/ge9Aq/Y3IADvNfrfgAB81QA8AEQPwJoAtOv0fwQC4L0BqIgBAOArBmAD0K7d/kMAAN5tRdyAAHzFANQEwAAA0KrnlXEDAvBfN2DGIxAAXzEAG4DoATgTgHZVzgAA8MkB+PZ/fgC87cTcgAD8qp1zAwLwq1bODQjAJwegNgAGAIBWJT0CAfDJATgTgHYDUEk3IABvunkEqgcAAwBArwGopEcgAN50sm5AAP7VDrsBAfjEAJwJQPQADADatWI+BgfglwNQeQMAwM834CvtBgTg565+DbQmAMkDUBuAdgNQiQMAwMd+AtgAtCvwEQiAjw7AAKBdK+1DAAD+0Q4dAAA+MACNfgQE4CMDsCYA7QagQgcAgB9dPQKdCYAbEIBWA/AK/BAAAAMAwJ9V4ocAAPw9AJV6AwLwoxP5IQAAf3X1CHQmAN2KfQUG4H4AagIQPQADgG5dPQJ1uwEBuPwQZE0Aug1AZQ9APIARfQMCcPcKvAEwAAC06mTfgPEA7l6BHwAMAACxA/B6AOjWegV/CADA5SvwBiB6AM4EoNsA3DwC1QCgWyP7Q4B4AHe/BhoAtBuAcgNGAzjhHwKkA9huwGwAxyNQNAADEA5guQGjAWw3YDaAuwF4AGjW3a+BOg9AKIDhQ4BoAHevwGsCED0AG4BulQ8BogHc/R54ANCtUx6BkgFsN2A2gOUGjAZwNwBrAtBtAMoNmAzgMQDZAJZHoGgAd6/ANQFo1nADZgMoHwJEAxh+BMwGcDwCRQPwCBQO4LgBowHcDcCZADRruQGjAdy9AtcEwAAA0GkAyg0YDcAjUDaAywHYAEQPwJkANMsjUDaA7QbMBnDcgNEA7gYg5QYMArDcgNEALn8C2AB0GwD/I0A0AI9A4QA8AmUDuByAAUD0ANQDQLM8AmUDGB6BsgEcj0DRAC5fgTcAzVpuwGgAlwMwAIgegJoA9OoxANkA3IDZAC4HYE0AkgegNgDNKgMQDWB4BMoGcDwCRQPwCBQO4PgQIBqAAQgHsDwCRQPwCBQOYLkBowFcfgt8JgC9Gn4EjAZwOQA1AWg2AP41SDaA4waMBrDdgNkAjg8BogFcDsCZAPTKI1A2gO0GzAbgESgbwOWvgeoBIHkAak0Aeg1AeQSKBjDcgNkAyg0YDcAjUDiA4waMBnA5ADUB6NUyANEALgcg+gZsCWD5B8HRAB43YDYAj0DZAC5/DRQ/AO0ADDdgNoByA0YDGG7AbADHhwDRALYfAbMBXL4CG4BmAAxAOIDlBowGcPsI5AZsBmD5GDz+DBQAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAAEAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAABAAAkAACAABIAAEgAAQAAJAAAgAASAABIAAEAACQAAIAAEgAASAANDv7w8BBgD+EJsHLsyzfwAAAABJRU5ErkJggg==" alt="image"></span>
+					<span class="cptch_span">&nbsp;=&nbsp;</span>
+					<span class="cptch_span">catorze</span>
+					<input type="hidden" name="cptch_result" value="LmI="><input type="hidden" name="cptch_time" value="1527114342">
+					<input type="hidden" name="cptch_form" value="wp_comments">
+				</label><span class="cptch_reload_button_wrap hide-if-no-js">
+					<noscript>
+						<style type="text/css">
+							.hide-if-no-js {
+								display: none !important;
+							}
+						</style>
+					</noscript>
+					<span class="cptch_reload_button dashicons dashicons-update"></span>
+				</span></span></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Enviar Comentário"> <input type="hidden" name="comment_post_ID" value="1199" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>			</form>
+			</div><!-- #respond -->
+					</div>
+				<!--comments-->
+							</div>
+			<!--post-page-contentn-wrapper-->
+		</div>
+		<!--primary-->
+		
+		<div id="secondary" class="widget-area stickylastwidget">
+			<div class="home-widget one-part"><div id="about_exm1-4" class="widget widget_about_exm1"><div class="widget-title">Sobre nós</div>
+<div class="about-widget">
+	<div class="about-logo">
+		<a href="http://blog.usinainfo.com.br/">
+		<img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/logo-blog.fw_.png" height="140" width="308" alt="Blog da Usinainfo">
+		</a>
+	</div>
+	<!--about-logo-->
+		<div class="about-social">
+		<ul>
+						<li>
+				<a href="https://www.facebook.com/faceusinainfo/" class="fb-social-icon" target="_blank">
+				</a>
+			</li>
+															<li>
+				<a href="https://plus.google.com/+UsinainfoBrasil/posts" class="google-social-icon" target="_blank">
+				</a>
+			</li>
+									<li>
+				<a href="https://www.youtube.com/user/usinainfo" class="youtube-social-icon" target="_blank">
+				</a>
+			</li>
+									<li>
+				<a href="http://blog.usinainfo.com.br/feed/rss/" class="rss-social-icon">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!--content-social-->
+		<div class="about-text">
+		<p>Hoje a Usinainfo é um dos maiores ecommerces de Ferramentas, Peças para Eletrônica, Componentes Eletrônicos, Sensores e Arduino do Brasil, contando com uma grande diversidade de produtos na linha de eletrônica.</p>
+	</div>
+	<!--about-text-->
+</div>
+<!--about-widget-->
+
+</div></div><div class="home-widget one-part"><div id="jumping_posts_exm1-7" class="widget widget_jumping_posts_exm1"><div class="widget-title">Sugestões</div>
+<div class="jumping-posts">
+	<ul>
+				<li class="post-2225 post type-post status-publish format-standard has-post-thumbnail hentry category-raspberry-pi">
+			<div class="jumping-posts-image">
+								<a href="http://blog.usinainfo.com.br/utilizando-o-raspberry-pi-3-e-sensor-pir-no-acionamento-de-lampadas/" title="Utilizando o Raspberry pi 3 e sensor PIR no acionamento de lâmpadas">
+				<img width="318" height="219" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_1412-3-318x219.jpg" class="attachment-jumping-posts-thumb size-jumping-posts-thumb wp-post-image" alt="">				</a>
+							</div>
+			<!---jumping-posts-image-->
+			<div class="jumping-posts-text">
+				<div class="jumping-posts-category">
+					<a href="http://blog.usinainfo.com.br/categoria/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>				</div>
+				<!--carousel-category-->
+				<div class="jumping-posts-title">
+					<a href="http://blog.usinainfo.com.br/utilizando-o-raspberry-pi-3-e-sensor-pir-no-acionamento-de-lampadas/">
+					Utilizando o Raspberry pi 3 e sensor…					</a>
+				</div>
+				<!--jumping-posts-title-->
+				<div class="jumping-posts-excerpt">
+					Neste tutorial, vamos dar continuidade ao material apresentado no artigo anterior, no qual, demonstramos como efetuar o acionamento de uma ou mais lâmpadas utilizando um módulo relé em conjunto...				</div>
+				<!--jumping-posts-excerpt-->
+			</div>
+			<!--jumping-posts-text-->
+		</li>
+				<li class="post-2390 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino">
+			<div class="jumping-posts-image">
+								<a href="http://blog.usinainfo.com.br/arduino-day-recife-um-evento-arduino-day-com-parceira-da-usinainfo/" title="Arduino Day Recife – Um evento Arduino Day com parceira da Usinainfo!">
+				<img width="318" height="219" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_2853-318x219.jpg" class="attachment-jumping-posts-thumb size-jumping-posts-thumb wp-post-image" alt="">				</a>
+							</div>
+			<!---jumping-posts-image-->
+			<div class="jumping-posts-text">
+				<div class="jumping-posts-category">
+					<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>				</div>
+				<!--carousel-category-->
+				<div class="jumping-posts-title">
+					<a href="http://blog.usinainfo.com.br/arduino-day-recife-um-evento-arduino-day-com-parceira-da-usinainfo/">
+					Arduino Day Recife – Um evento Arduino…					</a>
+				</div>
+				<!--jumping-posts-title-->
+				<div class="jumping-posts-excerpt">
+					No último dia 7 do mês de abril aconteceu no Recife mais um evento Arduino Day, um evento mundial que tem como objetivo celebrar o aniversário da plataforma Arduino,...				</div>
+				<!--jumping-posts-excerpt-->
+			</div>
+			<!--jumping-posts-text-->
+		</li>
+				<li class="post-2228 post type-post status-publish format-standard has-post-thumbnail hentry category-raspberry-pi">
+			<div class="jumping-posts-image">
+								<a href="http://blog.usinainfo.com.br/sensor-de-fluxo-de-agua-com-raspberry-pi/" title="Sensor de Fluxo de Água – Como Programar com Raspberry PI 3">
+				<img width="318" height="219" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_1188-edit-318x219.jpg" class="attachment-jumping-posts-thumb size-jumping-posts-thumb wp-post-image" alt="">				</a>
+							</div>
+			<!---jumping-posts-image-->
+			<div class="jumping-posts-text">
+				<div class="jumping-posts-category">
+					<a href="http://blog.usinainfo.com.br/categoria/raspberry-pi/" title="Raspberry Pi">Raspberry Pi</a>				</div>
+				<!--carousel-category-->
+				<div class="jumping-posts-title">
+					<a href="http://blog.usinainfo.com.br/sensor-de-fluxo-de-agua-com-raspberry-pi/">
+					Sensor de Fluxo de Água – Como…					</a>
+				</div>
+				<!--jumping-posts-title-->
+				<div class="jumping-posts-excerpt">
+					Neste tutorial, iremos trazer um conteúdo muito interessante e que pode ser inserido em uma grande variedade de projetos, os quais, vão desde&nbsp; aplicações voltadas para jardinagem até grandes...				</div>
+				<!--jumping-posts-excerpt-->
+			</div>
+			<!--jumping-posts-text-->
+		</li>
+				<li class="post-2365 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino category-projetos">
+			<div class="jumping-posts-image">
+								<a href="http://blog.usinainfo.com.br/arduino-standalone-com-protoboard-um-projeto-diy-para-quem-deseja-construir-o-seu-proprio-arduino/" title="Arduino Standalone com Protoboard Um Projeto DIY para Quem Deseja Construir o seu Próprio Arduino!">
+				<img width="318" height="219" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/stan-318x219.jpg" class="attachment-jumping-posts-thumb size-jumping-posts-thumb wp-post-image" alt="">				</a>
+							</div>
+			<!---jumping-posts-image-->
+			<div class="jumping-posts-text">
+				<div class="jumping-posts-category">
+					<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>				</div>
+				<!--carousel-category-->
+				<div class="jumping-posts-title">
+					<a href="http://blog.usinainfo.com.br/arduino-standalone-com-protoboard-um-projeto-diy-para-quem-deseja-construir-o-seu-proprio-arduino/">
+					Arduino Standalone com Protoboard Um Projeto DIY…					</a>
+				</div>
+				<!--jumping-posts-title-->
+				<div class="jumping-posts-excerpt">
+					Quem trabalha com eletrônica ou até mesmo com projetos Arduino sabe que não existem limites para suas capacidades, levando em consideração que diversos produtos podem ser desenvolvidos, necessitando somente...				</div>
+				<!--jumping-posts-excerpt-->
+			</div>
+			<!--jumping-posts-text-->
+		</li>
+			</ul>
+</div>
+<!--jumping-posts-->
+
+</div></div><div class="home-widget one-part navigation-has-menu fixed-widget" style="max-width: 317px;"><div id="most_commented_widget_exm1-4" class="widget widget_most_commented_widget_exm1"><div class="widget-title">Mais comentados</div>
+<div class="most-commented">
+
+	<ul class="most-commented-posts">
+				<li class="post-961 post type-post status-publish format-video has-post-thumbnail hentry category-arduino category-automacao-residencial post_format-post-format-video">
+			<div class="most-commented-cateogory">
+			<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--most-commented-cateogory-->
+			<div class="most-commented-title">
+				<a href="http://blog.usinainfo.com.br/leitor-biometrico-arduino-sistema-de-cadastramento-e-leitura-de-digitais/" title="Leitor Biométrico Arduino: Sistema de Cadastramento e Leitura de Digitais">
+				Leitor Biométrico Arduino: Sistema de Cadastramento e Leitura de Digitais				</a>
+			</div>
+			<!--most-commented-title-->
+			<div class="most-commented-count">
+				<a href="http://blog.usinainfo.com.br/leitor-biometrico-arduino-sistema-de-cadastramento-e-leitura-de-digitais/#comments">59</a>			</div>
+			<!--comment-count-->
+		</li>
+				<li class="post-852 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino category-automacao-residencial">
+			<div class="most-commented-cateogory">
+			<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--most-commented-cateogory-->
+			<div class="most-commented-title">
+				<a href="http://blog.usinainfo.com.br/sensor-de-fluxo-de-agua-para-arduino-1-30-lmin/" title="Sensor de Fluxo de Água para Arduino 1-30 l/min">
+				Sensor de Fluxo de Água para Arduino 1-30 l/min				</a>
+			</div>
+			<!--most-commented-title-->
+			<div class="most-commented-count">
+				<a href="http://blog.usinainfo.com.br/sensor-de-fluxo-de-agua-para-arduino-1-30-lmin/#comments">52</a>			</div>
+			<!--comment-count-->
+		</li>
+				<li class="post-945 post type-post status-publish format-video has-post-thumbnail hentry category-arduino post_format-post-format-video">
+			<div class="most-commented-cateogory">
+			<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--most-commented-cateogory-->
+			<div class="most-commented-title">
+				<a href="http://blog.usinainfo.com.br/braco-robotico-para-arduino/" title="Braço Robótico para Arduino">
+				Braço Robótico para Arduino				</a>
+			</div>
+			<!--most-commented-title-->
+			<div class="most-commented-count">
+				<a href="http://blog.usinainfo.com.br/braco-robotico-para-arduino/#comments">38</a>			</div>
+			<!--comment-count-->
+		</li>
+				<li class="post-412 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino category-automacao-residencial">
+			<div class="most-commented-cateogory">
+			<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--most-commented-cateogory-->
+			<div class="most-commented-title">
+				<a href="http://blog.usinainfo.com.br/modulo-de-reconhecimento-de-voz-para-arduino/" title="Módulo de Reconhecimento de Voz e Comando para Arduino">
+				Módulo de Reconhecimento de Voz e Comando para Arduino				</a>
+			</div>
+			<!--most-commented-title-->
+			<div class="most-commented-count">
+				<a href="http://blog.usinainfo.com.br/modulo-de-reconhecimento-de-voz-para-arduino/#comments">35</a>			</div>
+			<!--comment-count-->
+		</li>
+				<li class="post-1199 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino">
+			<div class="most-commented-cateogory">
+			<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--most-commented-cateogory-->
+			<div class="most-commented-title">
+				<a href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/" title="Carrinho Arduino Controlado através de Bluetooth e Sistema Android!">
+				Carrinho Arduino Controlado através de Bluetooth e Sistema Android!				</a>
+			</div>
+			<!--most-commented-title-->
+			<div class="most-commented-count">
+				<a href="http://blog.usinainfo.com.br/carrinho-arduino-controlado-por-bluetooth-e-sistema-android/#comments">34</a>			</div>
+			<!--comment-count-->
+		</li>
+			</ul>
+
+</div>
+<!--most-commented-->
+
+</div></div>		</div>
+		<!--secondary-->
+	</div>
+	<!--post-->
+		<div class="fullwidth">
+		<div class="home-widget four-parts">
+						<h3>
+				<span class="widget-title">
+				Artigos Relacionados				</span>
+			</h3>
+			<div class="blog-category">
+	<ul>			 				 
+											
+		<li>		
+			<div class="blog-post-image">
+								<a href="http://blog.usinainfo.com.br/arduino-day-recife-um-evento-arduino-day-com-parceira-da-usinainfo/" title="Arduino Day Recife – Um evento Arduino Day com parceira da Usinainfo!">
+				<div class="image_fx3"><img width="298" height="186" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/IMG_2853-298x186.jpg" class="attachment-small-blog size-small-blog wp-post-image" alt=""></div>				</a>
+							</div>
+			<!--blog-post-image-->
+			<div class="category-icon">
+				<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--featured-category-->
+			<div class="blog-post-title-box">
+				<div class="blog-post-title">
+					<h2>
+						<a href="http://blog.usinainfo.com.br/arduino-day-recife-um-evento-arduino-day-com-parceira-da-usinainfo/">
+						Arduino Day Recife – Um evento Arduino Day com parceira da Usinainfo!						</a>
+					</h2>
+				</div>
+				<!--blog-post-title-->
+			</div>
+			<!--blog-post-title-box-->
+			<div class="blog-post-content">
+				No último dia 7 do mês de abril aconteceu no Recife mais um evento Arduino Day, um evento mundial que tem como objetivo celebrar o aniversário da plataforma Arduino,...			</div>
+			<!--blog-post-content-->
+		</li>											
+		<li>		
+			<div class="blog-post-image">
+								<a href="http://blog.usinainfo.com.br/arduino-standalone-com-protoboard-um-projeto-diy-para-quem-deseja-construir-o-seu-proprio-arduino/" title="Arduino Standalone com Protoboard Um Projeto DIY para Quem Deseja Construir o seu Próprio Arduino!">
+				<div class="image_fx3"><img width="298" height="186" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/stan-298x186.jpg" class="attachment-small-blog size-small-blog wp-post-image" alt=""></div>				</a>
+							</div>
+			<!--blog-post-image-->
+			<div class="category-icon">
+				<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--featured-category-->
+			<div class="blog-post-title-box">
+				<div class="blog-post-title">
+					<h2>
+						<a href="http://blog.usinainfo.com.br/arduino-standalone-com-protoboard-um-projeto-diy-para-quem-deseja-construir-o-seu-proprio-arduino/">
+						Arduino Standalone com Protoboard Um Projeto DIY para Quem Deseja Construir o seu Próprio Arduino!						</a>
+					</h2>
+				</div>
+				<!--blog-post-title-->
+			</div>
+			<!--blog-post-title-box-->
+			<div class="blog-post-content">
+				Quem trabalha com eletrônica ou até mesmo com projetos Arduino sabe que não existem limites para suas capacidades, levando em consideração que diversos produtos podem ser desenvolvidos, necessitando somente...			</div>
+			<!--blog-post-content-->
+		</li>											
+		<li>		
+			<div class="blog-post-image">
+								<a href="http://blog.usinainfo.com.br/comunicacao-sem-fio-arduino-transferindo-dados-com-transmissor-receptor-rf-433mhz/" title="Comunicação sem Fio Arduino – Transferindo dados com Transmissor + Receptor RF 433Mhz">
+				<div class="image_fx3"><img width="298" height="186" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/9561-298x186.jpg" class="attachment-small-blog size-small-blog wp-post-image" alt=""></div>				</a>
+							</div>
+			<!--blog-post-image-->
+			<div class="category-icon">
+				<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--featured-category-->
+			<div class="blog-post-title-box">
+				<div class="blog-post-title">
+					<h2>
+						<a href="http://blog.usinainfo.com.br/comunicacao-sem-fio-arduino-transferindo-dados-com-transmissor-receptor-rf-433mhz/">
+						Comunicação sem Fio Arduino – Transferindo dados com Transmissor + Receptor RF 433Mhz						</a>
+					</h2>
+				</div>
+				<!--blog-post-title-->
+			</div>
+			<!--blog-post-title-box-->
+			<div class="blog-post-content">
+				Quando queremos desenvolver um projeto de comunicação sem fio sempre encontramos problemas quando o assunto é instalação e implementação dos mesmos, ou até mesmo tem vezes que desejamos realizar...			</div>
+			<!--blog-post-content-->
+		</li>											
+		<li>		
+			<div class="blog-post-image">
+								<a href="http://blog.usinainfo.com.br/como-programar-arduino-gravando-codigos-em-diferentes-modelos-arduino/" title="Como Programar Arduino – Gravando Códigos em Diferentes Modelos Arduino!">
+				<div class="image_fx3"><img width="298" height="186" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/arduinos2-298x186.jpg" class="attachment-small-blog size-small-blog wp-post-image" alt=""></div>				</a>
+							</div>
+			<!--blog-post-image-->
+			<div class="category-icon">
+				<a href="http://blog.usinainfo.com.br/categoria/arduino/" title="Arduino">Arduino</a>			</div>
+			<!--featured-category-->
+			<div class="blog-post-title-box">
+				<div class="blog-post-title">
+					<h2>
+						<a href="http://blog.usinainfo.com.br/como-programar-arduino-gravando-codigos-em-diferentes-modelos-arduino/">
+						Como Programar Arduino – Gravando Códigos em Diferentes Modelos Arduino!						</a>
+					</h2>
+				</div>
+				<!--blog-post-title-->
+			</div>
+			<!--blog-post-title-box-->
+			<div class="blog-post-content">
+				Dando continuidade aos nossos artigos de como programar Arduino, vamos aprender agora como gravar um código junto ao Arduino, desenvolveremos através de texto imagem todo o passo a passo...			</div>
+			<!--blog-post-content-->
+		</li></ul>
+</div>
+		</div>
+		<!--home-widget-->
+	</div>
+	<!--fullwidth-->
+		</div>
+<!--main-->
+
+</section>
+<!--wrapper-->
+<section class="footer-advert ad-widget-sizes">
+	<div class="ad-widget-box">
+		<span style="font-size:12px">
+Se tiver alguma dúvida entre em contato conosco pelo nosso fale conosco,<a hre="https://www.usinainfo.com.br/fale-conosco" style="cursor:pointer"> [ clicando aqui ]</a><br>
+</span>	</div>	
+	<!-- ad-widget-box -->
+</section>
+<!-- footer-advert -->
+<footer id="footer">
+	<div class="footer-wrap">
+		<div class="footer-logo">
+			<a href="http://blog.usinainfo.com.br/">
+				<img src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/logo-blog.fw_.png" alt="Blog da Usinainfo">
+			</a>
+		</div>
+		<!--footer-logo-->
+		<nav id="bottom-menu">
+			<div class="menu-blog-container"><ul id="menu-blog-1" class="menu"><li id="menu-item-410" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-410"><a href="http://blog.usinainfo.com.br/categoria/ferramentas/">Ferramentas</a></li>
+<li id="menu-item-77" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-77"><a href="http://blog.usinainfo.com.br/categoria/arduino/">Arduino</a></li>
+<li id="menu-item-900" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-900"><a href="http://blog.usinainfo.com.br/categoria/raspberry-pi/">Raspberry Pi</a></li>
+<li id="menu-item-1960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1960"><a href="http://blog.usinainfo.com.br/categoria/omega2/">Omega2</a></li>
+<li id="menu-item-1734" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1734"><a href="http://blog.usinainfo.com.br/categoria/automacao-residencial/">Automação Residencial</a></li>
+<li id="menu-item-1986" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1986"><a href="http://blog.usinainfo.com.br/categoria/eletronica/">Eletrônica</a></li>
+<li id="menu-item-400" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-400"><a href="http://www.usinainfo.com.br/">Loja Virtual</a></li>
+</ul></div>		</nav>
+		<!--bottom-menu-->
+		
+				
+		<div class="content-social">
+			<ul>
+								<li>
+					<a href="https://www.facebook.com/faceusinainfo/" class="fb-social-icon" target="_blank">
+					</a>
+				</li>
+																				<li>
+					<a href="https://plus.google.com/+UsinainfoBrasil/posts" class="google-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="https://www.youtube.com/user/usinainfo" class="youtube-social-icon" target="_blank">
+					</a>
+				</li>
+												<li>
+					<a href="http://blog.usinainfo.com.br/feed/rss/" class="rss-social-icon">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--content-social-->
+				
+	</div>
+	<!--footer-wrap-->
+	<div class="copyright">
+		<div class="copyright-text">
+			Usinainfo		</div>
+		<!--copyright-text-->
+	</div>
+	<!--copyright-->
+</footer>
+<!--footer-->
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/comment-reply.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpreview = {"ajaxurl":"http:\/\/blog.usinainfo.com.br\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/main.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/hoverIntent.min.js.download"></script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/wp-embed.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var cptch_vars = {"nonce":"121162a26d","ajaxurl":"http:\/\/blog.usinainfo.com.br\/wp-admin\/admin-ajax.php","enlarge":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Carrinho Arduino Controlado através de Bluetooth e Sistema Android! - Blog da Usinainfo_files/front_end_script.js.download"></script>
+<script id="cptch_script_loader" type="text/javascript"></script></body></html>

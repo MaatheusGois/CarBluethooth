@@ -1,0 +1,31 @@
+jQuery(document).ready(function($) {
+	        //search
+
+        $("#navigation #searchform input").on( 'focus', function(){
+            $(this).parents('.search-box').addClass('active');
+        });
+
+        $(document).on( 'click', function(e){
+            if ($(e.target).parents('.top-menu').length == 0) {
+              $('.search-box').removeClass('active');
+            }        
+        });
+				$("#s").on("input", function(e){
+					$('.search-box .featured-thumbnails li').remove();
+					e.preventDefault();	
+					var search_word = $(this).val();
+					
+				
+						jQuery.ajax({						
+							type : "POST",
+							url: stepfoxcomplete.stepfoxcompleteurl,
+							data: {"action": "stepfox_search", search_this: search_word},
+							success : function(response) {				
+								
+								$('.search-box').find('.featured-thumbnails').html(response);
+								return false;											
+							}
+						});
+											
+			});	
+});
